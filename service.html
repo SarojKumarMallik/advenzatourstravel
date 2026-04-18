@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRAVELER - Free Travel Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+
+/* ================= ROOT ================= */
+:root {
+  --accent: #F4A621;
+  --black: #000;
+  --dark: #0a0a0a;
+  --white: #fff;
+  --gray: #9ca3af;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+/* ================= TOPBAR ================= */
+.topbar-sec{
+  background:#F4A621;
+  color:#fff;
+  padding:8px 0;
+  font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.topbar-wrap{
+  max-width:1400px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.topbar-left{
+  display:flex;
+  gap:20px;
+}
+
+.topbar-item{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.topbar-right{
+  display:flex;
+  gap:10px;
+}
+
+.topbar-right a{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+  color: #F4A621;
+}
+
+.topbar-right a:hover{
+  background:var(--accent);
+  color:#000;
+  transform:translateY(-3px);
+}
+
+/* ================= NAVBAR ================= */
+.main-nav-sec{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  z-index:999;
+}
+
+.nav-wrap{
+  max-width:1400px;
+  margin:auto;
+  padding:0 20px;
+  height:85px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LOGO */
+.nav-logo img{
+  height:110px;
+  width:150px;
+  object-fit:contain;
+}
+
+/* MENU */
+.nav-menu{
+  display:flex;
+  gap:18px;
+}
+
+.nav-item{
+  font-weight:500;
+  color:#ddd;
+  position:relative;
+  padding:6px 10px;
+  transition:0.3s;
+}
+
+.nav-item:hover{
+  color:var(--accent);
+}
+
+.nav-item::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0%;
+  height:2px;
+  background:var(--accent);
+  transition:0.3s;
+}
+
+.nav-item:hover::after{
+  width:100%;
+}
+
+/* ================= BUTTON ================= */
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.btn-book{
+  background:linear-gradient(135deg,#F4A621,#F4A621);
+  color:#fff;
+  padding:10px 20px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  transition:0.3s;
+}
+.btn-book:hover{
+    color: white !important;
+    cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+.menu-btn{
+  display:none;
+  font-size:24px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* Overlay */
+.mob-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+  z-index:1500;
+}
+
+.mob-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* Mobile Menu */
+.mob-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:280px;
+  height:100%;
+  background:#0a0a0a;
+  transition:0.4s;
+  padding:30px 20px;
+  z-index:2000;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.mob-menu.active{
+  right:0;
+}
+
+.mob-item{
+  padding:14px 10px;
+  border-radius:8px;
+  color:#ccc;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.mob-item:hover{
+  background:rgba(255,255,255,0.05);
+  color:var(--accent);
+  padding-left:15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:992px){
+
+  /* 🔴 HIDE TOPBAR */
+  .topbar-sec{
+    display:none;
+  }
+
+  .nav-menu{display:none;}
+  .btn-book{display:none;}
+  .menu-btn{display:block;}
+
+  .nav-wrap{
+    height:70px;
+  }
+
+  .nav-logo img{
+    height:80px;
+    width:120px;
+  }
+
+}
+
+</style>
+
+
+<!-- TOPBAR -->
+<div class="topbar-sec">
+  <div class="topbar-wrap">
+    <div class="topbar-left">
+      <div class="topbar-item">
+  <i class="fa fa-phone-alt"></i> 
+  <a href="tel:+918328806162">+91 8328806162</a>
+</div>
+
+<div class="topbar-item">
+  <i class="fa fa-envelope"></i> 
+  <a href="mailto:advenzatoours99@gmail.com">advenzatoours99@gmail.com</a>
+</div>
+    </div>
+
+    <div class="topbar-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<!-- NAVBAR -->
+<header class="main-nav-sec">
+  <div class="nav-wrap">
+
+    <div class="nav-logo">
+      <img src="img/logo.webp">
+    </div>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="about.html" class="nav-item">About</a>
+       <a href="service.html" class="nav-item">Service</a>
+      <a href="package.html" class="nav-item">Package</a>
+      <a href="gallery.html" class="nav-item">Gallery</a>
+      <a href="blog.html" class="nav-item">Blog</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <a class="btn-book">Book Taxi</a>
+      <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- OVERLAY -->
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobileMenu">
+  <a href="index.html" class="mob-item">Home</a>
+  <a href="about.html" class="mob-item">About</a>
+  <a href="service.html" class="mob-item">Service</a>
+  <a href="package.html" class="mob-item">Package</a>
+  <a href="gallery.html" class="mob-item">Gallery</a>
+  <a href="blog.html" class="mob-item">Blog</a>
+  <a href="contact.html" class="mob-item">Contact</a>
+</div>
+
+
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+  document.getElementById("overlay").classList.toggle("active");
+}
+</script>
+
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-white text-uppercase">Services</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Services</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+  
+
+
+  <style>
+    /* ===== HEADING ===== */
+.dest-sec{
+    background:#f0f2f3;
+    padding:50px 20px 50px;
+    text-align:center;
+}
+
+.dest-sub{
+    color:#F4A621;
+    letter-spacing:6px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.dest-title{
+    font-size:30px;
+    font-weight:700;
+    color:#1a1a1a;
+    margin:0;
+}
+  </style>
+<!-- HEADING -->
+<section class="dest-sec">
+    <div class="dest-sub">CAR RENTAL IN BHUBANESWAR</div>
+    <h2 class="dest-title">Reliable & Affordable Services by Advenza Tours and Travel</h2>
+</section>
+
+<section class="ax-car-sec">
+  <div class="ax-container">
+
+    
+
+    <!-- GRID -->
+    <div class="ax-grid">
+
+      <!-- LEFT -->
+      <div class="ax-left">
+        <h3 class="ax-left-title">Why Choose Us?</h3>
+        <p class="ax-left-text">
+          As a leading travel agency in Bhubaneswar, we provide reliable car rental 
+          services for local travel, airport transfers, sightseeing, and outstation trips.
+        </p>
+
+        <ul class="ax-list">
+          <li>✔ Professional & experienced drivers</li>
+          <li>✔ Well-maintained and clean vehicles</li>
+          <li>✔ Affordable pricing with no hidden charges</li>
+          <li>✔ Coverage across Cuttack, Puri & Khordha</li>
+        </ul>
+
+        <a href="#" class="ax-btn">Book Your Ride</a>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="ax-right">
+
+        <div class="ax-card">
+          <h4>🚗 Local Rentals</h4>
+          <p>Explore Bhubaneswar comfortably with flexible hourly packages.</p>
+        </div>
+
+        <div class="ax-card">
+          <h4>✈ Airport Transfers</h4>
+          <p>On-time pickups & drops for a stress-free travel experience.</p>
+        </div>
+
+        <div class="ax-card">
+          <h4>🌍 Outstation Trips</h4>
+          <p>Travel across Odisha with comfort and reliability.</p>
+        </div>
+
+        <div class="ax-card">
+          <h4>🏝 Sightseeing Tours</h4>
+          <p>Puri, Konark, Chilika Lake, Lingaraj Temple & more.</p>
+        </div>
+
+        <div class="ax-card">
+          <h4>💼 Corporate Travel</h4>
+          <p>Professional services for business meetings and events.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+/* ===== SECTION ===== */
+.ax-car-sec {
+  padding: 20px 20px;
+  
+}
+
+.ax-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== HEADING ===== */
+.ax-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ax-sub {
+  color: #F4A621;
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ax-title {
+  font-size: 42px;
+  margin: 10px 0;
+  color: #111;
+}
+
+.ax-desc {
+  color: #666;
+  font-size: 16px;
+}
+
+/* ===== GRID ===== */
+.ax-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* ===== LEFT ===== */
+.ax-left-title {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.ax-left-text {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.ax-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.ax-list li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ===== BUTTON ===== */
+.ax-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #F4A621, #ffb84d);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(244,166,33,0.3);
+}
+
+.ax-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(244,166,33,0.4);
+}
+
+/* ===== RIGHT CARDS ===== */
+.ax-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ax-card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* TOP BORDER EFFECT */
+.ax-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #F4A621;
+  top: 0;
+  left: 0;
+}
+
+.ax-card h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.ax-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* HOVER */
+.ax-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 900px){
+  .ax-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ax-right {
+    grid-template-columns: 1fr;
+  }
+
+  .ax-title {
+    font-size: 30px;
+  }
+}
+
+</style>
+
+<!-- HEADING -->
+<section class="dest-sec mt-4">
+    <div class="dest-sub">YOUR TRUSTED TRAVEL PARTNER</div>
+    <h2 class="dest-title">Benefits of Choosing Advenza Tours and Travel for Car Rental</h2>
+</section>
+
+<section class="ax-info-sec">
+  <div class="ax-info-container">
+
+ 
+
+    <!-- BENEFITS LIST -->
+    <div class="ax-info-box">
+      <ul class="ax-info-list">
+        <li><strong>Safe and Well-Maintained Vehicles:</strong> All cars undergo regular maintenance and safety checks.</li>
+        <li><strong>Professional Drivers:</strong> Experienced and courteous drivers for a comfortable travel experience.</li>
+        <li><strong>Flexible Booking Options:</strong> Short-term or long-term rentals available to fit your schedule.</li>
+        <li><strong>Transparent Pricing:</strong> No hidden charges, all costs are clear before booking.</li>
+        <li><strong>Local Expertise:</strong> As a trusted travel agency in Bhubaneswar, we know the best routes and tourist spots.</li>
+      </ul>
+    </div>
+
+    <!-- BOOKING SECTION -->
+    <div class="ax-info-block">
+      <h3>How to Book Your Car Rental in Bhubaneswar</h3>
+      <p>
+        Booking a car with <strong>Advenza Tours and Travel</strong> is simple. You can call us, 
+        send a WhatsApp message, or fill out our enquiry form on the website. 
+        Our team will guide you, help you choose the right vehicle, and confirm your booking quickly.
+      </p>
+    </div>
+
+    <!-- EXPLORE SECTION -->
+    <div class="ax-info-block">
+      <h3>Explore Bhubaneswar with Ease</h3>
+      <p>
+        Whether it’s a short city trip, a weekend getaway, or a long-distance journey across Odisha, 
+        our car rental services provide the perfect solution. Enjoy peace of mind, comfort, and 
+        convenience with <strong>Advenza Tours and Travel</strong> — your trusted travel partner.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+/* ===== SECTION ===== */
+.ax-info-sec {
+  padding: 20px 20px;
+  
+}
+
+.ax-info-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== HEADING ===== */
+.ax-info-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ax-info-head h2 {
+  font-size: 34px;
+  color: #111;
+  position: relative;
+  display: inline-block;
+}
+
+/* UNDERLINE EFFECT */
+.ax-info-head h2::after {
+  content: "";
+  width: 60%;
+  height: 4px;
+  background: #F4A621;
+  position: absolute;
+  left: 20%;
+  bottom: -10px;
+  border-radius: 5px;
+}
+
+/* ===== BOX ===== */
+.ax-info-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+/* LIST */
+.ax-info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ax-info-list li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ICON BULLET */
+.ax-info-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #F4A621;
+  font-weight: bold;
+}
+
+/* ===== BLOCKS ===== */
+.ax-info-block {
+  margin-bottom: 35px;
+  padding: 25px;
+  background: #fff;
+  border-left: 4px solid #F4A621;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  transition: 0.3s;
+}
+
+.ax-info-block h3 {
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.ax-info-block p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* HOVER EFFECT */
+.ax-info-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+  .ax-info-head h2 {
+    font-size: 26px;
+  }
+}
+
+</style>
+
+
+<section class="ax-gear-sec">
+  <div class="ax-gear-container">
+
+    <div class="ax-gear-grid">
+
+      <!-- LEFT CONTENT (UNCHANGED) -->
+      <div class="ax-gear-left">
+
+        <h2 class="ax-gear-title">Get Into Gear</h2>
+
+        <p class="ax-gear-text">
+          Looking for a reliable and affordable taxi rental service in <b>Bhubaneswar</b>? 
+          We offer <b>unlimited cars, unlimited mileage, and 24/7 pickup and return access</b> 
+          to make your travel smooth and flexible.
+        </p>
+
+        <div class="ax-gear-features">
+
+          <div class="ax-gear-item">
+            <div class="ax-gear-icon">💰</div>
+            <div>
+              <h4>The Lowest Rates</h4>
+              <p>Affordable rentals without compromising comfort or safety.</p>
+            </div>
+          </div>
+
+          <div class="ax-gear-item">
+            <div class="ax-gear-icon">🚗</div>
+            <div>
+              <h4>Unlimited Gas & Miles</h4>
+              <p>Drive freely with no mileage restrictions.</p>
+            </div>
+          </div>
+
+          <div class="ax-gear-item">
+            <div class="ax-gear-icon">⏰</div>
+            <div>
+              <h4>24/7 Pickup & Return</h4>
+              <p>Book, pick, and return anytime with ease.</p>
+            </div>
+          </div>
+
+          <div class="ax-gear-item">
+            <div class="ax-gear-icon">📍</div>
+            <div>
+              <h4>Multiple Drop-Off Locations</h4>
+              <p>Convenient drop points across the city.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT OFFERS (UPGRADED) -->
+      <div class="ax-gear-right ax-offer-pro">
+
+        <h3 class="ax-offer-title ax-offer-pro-title">🔥 Exclusive Offers</h3>
+
+        <div class="ax-offer-card ax-offer-pro-card">
+          <div class="ax-offer-ribbon">15%</div>
+          <h4>First Booking Offer</h4>
+          <p>Get instant discount on your first ride.</p>
+        </div>
+
+        <div class="ax-offer-card ax-offer-pro-card">
+          <div class="ax-offer-ribbon">8%</div>
+          <h4>Long Trip Discount</h4>
+          <p>Save more on bookings above 4 days.</p>
+        </div>
+
+        <div class="ax-offer-card ax-offer-pro-card">
+          <div class="ax-offer-ribbon">10%</div>
+          <h4>Group Travel Offer</h4>
+          <p>Best deals on passenger van rentals.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+/* ===== SECTION ===== */
+.ax-gear-sec {
+  padding: 20px 20px;
+}
+
+.ax-gear-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* GRID */
+.ax-gear-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* LEFT */
+.ax-gear-title {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.ax-gear-text {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* FEATURES */
+.ax-gear-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.ax-gear-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.ax-gear-icon {
+  font-size: 24px;
+  background: #F4A621;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  min-width: 45px;
+  text-align: center;
+}
+
+.ax-gear-item h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.ax-gear-item p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ===== RIGHT (UPGRADED) ===== */
+.ax-offer-pro {
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff, #fff7e6);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.ax-offer-pro-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+/* CARD */
+.ax-offer-pro-card {
+  position: relative;
+  background: #fff;
+  padding: 20px 20px 20px 60px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  transition: 0.4s;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* RIBBON */
+.ax-offer-ribbon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #F4A621, #ffb84d);
+  color: #fff;
+  padding: 12px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 0 0 10px 0;
+}
+
+/* TEXT */
+.ax-offer-pro-card h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.ax-offer-pro-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* HOVER */
+.ax-offer-pro-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* GLOW BORDER */
+.ax-offer-pro-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, #F4A621, transparent) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.ax-offer-pro-card:hover::after {
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .ax-gear-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ax-gear-features {
+    grid-template-columns: 1fr;
+  }
+
+  .ax-gear-title {
+    font-size: 28px;
+  }
+
+  .ax-offer-pro {
+    margin-top: 30px;
+  }
+}
+
+</style>
+
+<!-- HEADING -->
+<section class="dest-sec mt-4">
+    <div class="dest-sub">RELIABLE TRAVEL SOLUTIONS IN BHUBANESWAR</div>
+    <h2 class="dest-title">Lowest Rates & Highest Quality Rentals</h2>
+</section>
+<section class="axrent-sec">
+
+  
+  <div class="axrent-container">
+
+    
+
+    <!-- GRID -->
+    <div class="axrent-grid">
+
+      <!-- ITEM -->
+      <div class="axrent-item">
+        <div class="axrent-icon">✔</div>
+        <p>Enjoy high-quality rides at budget-friendly rates – no hidden costs.</p>
+      </div>
+
+      <div class="axrent-item">
+        <div class="axrent-icon">✔</div>
+        <p>Every car is regularly serviced and cleaned for a safe, smooth drive.</p>
+      </div>
+
+      <div class="axrent-item">
+        <div class="axrent-icon">✔</div>
+        <p>Choose from hourly, daily, or long-term rentals to suit your travel needs.</p>
+      </div>
+
+      <div class="axrent-item">
+        <div class="axrent-icon">✔</div>
+        <p>Get your rental car delivered right to your location – hassle-free.</p>
+      </div>
+
+      <div class="axrent-item">
+        <div class="axrent-icon">✔</div>
+        <p>From economy to luxury, we have the perfect car for every journey.</p>
+      </div>
+
+      <div class="axrent-item">
+        <div class="axrent-icon">✔</div>
+        <p>Our team is always available to assist you, anytime, anywhere.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* ===== SECTION ===== */
+.axrent-sec {
+  position: relative;
+  padding: 40px 20px;
+  
+  overflow: hidden;
+
+}
+
+
+/* CONTAINER */
+.axrent-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  z-index: 2;
+}
+
+/* TITLE */
+.axrent-title {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 70px;
+  line-height: 1.3;
+}
+
+/* GRID */
+.axrent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ITEM */
+.axrent-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.7;
+  transition: 0.3s;
+}
+
+/* ICON */
+.axrent-icon {
+  min-width: 36px;
+  height: 36px;
+  background: #F4A621;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* HOVER */
+.axrent-item:hover {
+  transform: translateY(-6px);
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .axrent-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .axrent-title {
+    font-size: 30px;
+  }
+}
+
+</style>
+
+
+
+   <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <img src="img/logo.webp" alt="" style=" width: 200px;">
+                </a>
+                <p>Advenza Tours & Travels offers reliable cab services and customized tour packages for comfortable, affordable journeys.</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+    
+    <a class="btn btn-square mr-2" href="#"
+       style="border:1px solid #F4A621; color:#F4A621;">
+       <i class="fab fa-twitter"></i>
+    </a>
+
+    <a class="btn btn-square mr-2" href="#"
+       style="border:1px solid #F4A621; color:#F4A621;">
+       <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a class="btn btn-square mr-2" href="#"
+       style="border:1px solid #F4A621; color:#F4A621;">
+       <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a class="btn btn-square" href="#"
+       style="border:1px solid #F4A621; color:#F4A621;">
+       <i class="fab fa-instagram"></i>
+    </a>
+
+</div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    
+                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    
+                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    
+                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+
+
+     <!-- MAP -->
+   <div class="map-box mb-1">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.216204812192!2d85.86819867428513!3d20.29974761241981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190b0052e7e17f%3A0x49a28d7b4e807d45!2sADVENZA%20TOUR&#39;S%20AND%20TRAVEL!5e1!3m2!1sen!2sin!4v1776492370905!5m2!1sen!2sin"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+    
+
+    <!-- Address -->
+    <p>
+        <i class="fa fa-map-marker-alt mr-2"></i>
+        <a href="https://share.google/XEw0MIOWUYqolAqZv" target="_blank">
+            Prachivihar, Palasuni, Bhubaneswar – 751025
+        </a>
+    </p>
+
+    <!-- Phone -->
+    <p>
+        <i class="fa fa-phone-alt mr-2"></i>
+        <a href="tel:+918328806162">+91 8328806162</a>
+    </p>
+
+    <!-- Email -->
+    <p>
+        <i class="fa fa-envelope mr-2"></i>
+        <a href="mailto:advenzatoours99@gmail.com">advenzatoours99@gmail.com</a>
+    </p>
+
+   
+</div>
+
+<style>
+.map-box{
+    border-radius:12px;
+    overflow:hidden;
+    margin-top:10px;
+}
+.map-box iframe{
+    width:100%;
+    height:180px;
+    border:0;
+}
+</style>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <!--/*** The author’s attribution link below must remain intact on your website. ***/-->
+                <!--/*** If you wish to remove this credit link, please purchase the Pro Version from https://htmlcodex.com . ***/-->
+                <!-- <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com" style="color: #F4A621;">HTML Codex</a></p> -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #F4A621; color: #fff;"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

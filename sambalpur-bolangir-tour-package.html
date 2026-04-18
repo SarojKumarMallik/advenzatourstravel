@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRAVELER - Free Travel Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+
+/* ================= ROOT ================= */
+:root {
+  --accent: #F4A621;
+  --black: #000;
+  --dark: #0a0a0a;
+  --white: #fff;
+  --gray: #9ca3af;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+/* ================= TOPBAR ================= */
+.topbar-sec{
+  background:#F4A621;
+  color:#fff;
+  padding:8px 0;
+  font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.topbar-wrap{
+  max-width:1400px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.topbar-left{
+  display:flex;
+  gap:20px;
+}
+
+.topbar-item{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.topbar-right{
+  display:flex;
+  gap:10px;
+}
+
+.topbar-right a{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+  color: #F4A621;
+}
+
+.topbar-right a:hover{
+  background:var(--accent);
+  color:#000;
+  transform:translateY(-3px);
+}
+
+/* ================= NAVBAR ================= */
+.main-nav-sec{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  z-index:999;
+}
+
+.nav-wrap{
+  max-width:1400px;
+  margin:auto;
+  padding:0 20px;
+  height:85px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LOGO */
+.nav-logo img{
+  height:110px;
+  width:150px;
+  object-fit:contain;
+}
+
+/* MENU */
+.nav-menu{
+  display:flex;
+  gap:18px;
+}
+
+.nav-item{
+  font-weight:500;
+  color:#ddd;
+  position:relative;
+  padding:6px 10px;
+  transition:0.3s;
+}
+
+.nav-item:hover{
+  color:var(--accent);
+}
+
+.nav-item::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0%;
+  height:2px;
+  background:var(--accent);
+  transition:0.3s;
+}
+
+.nav-item:hover::after{
+  width:100%;
+}
+
+/* ================= BUTTON ================= */
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.btn-book{
+  background:linear-gradient(135deg,#F4A621,#F4A621);
+  color:#fff;
+  padding:10px 20px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  transition:0.3s;
+}
+.btn-book:hover{
+    color: white !important;
+    cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+.menu-btn{
+  display:none;
+  font-size:24px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* Overlay */
+.mob-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+  z-index:1500;
+}
+
+.mob-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* Mobile Menu */
+.mob-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:280px;
+  height:100%;
+  background:#0a0a0a;
+  transition:0.4s;
+  padding:30px 20px;
+  z-index:2000;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.mob-menu.active{
+  right:0;
+}
+
+.mob-item{
+  padding:14px 10px;
+  border-radius:8px;
+  color:#ccc;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.mob-item:hover{
+  background:rgba(255,255,255,0.05);
+  color:var(--accent);
+  padding-left:15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:992px){
+
+  /* 🔴 HIDE TOPBAR */
+  .topbar-sec{
+    display:none;
+  }
+
+  .nav-menu{display:none;}
+  .btn-book{display:none;}
+  .menu-btn{display:block;}
+
+  .nav-wrap{
+    height:70px;
+  }
+
+  .nav-logo img{
+    height:80px;
+    width:120px;
+  }
+
+}
+
+</style>
+
+
+<!-- TOPBAR -->
+<div class="topbar-sec">
+  <div class="topbar-wrap">
+    <div class="topbar-left">
+      <div class="topbar-item">
+  <i class="fa fa-phone-alt"></i> 
+  <a href="tel:+918328806162">+91 8328806162</a>
+</div>
+
+<div class="topbar-item">
+  <i class="fa fa-envelope"></i> 
+  <a href="mailto:advenzatoours99@gmail.com">advenzatoours99@gmail.com</a>
+</div>
+    </div>
+
+    <div class="topbar-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<!-- NAVBAR -->
+<header class="main-nav-sec">
+  <div class="nav-wrap">
+
+    <div class="nav-logo">
+      <img src="img/logo.webp">
+    </div>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="about.html" class="nav-item">About</a>
+       <a href="service.html" class="nav-item">Service</a>
+      <a href="package.html" class="nav-item">Package</a>
+      <a href="gallery.html" class="nav-item">Gallery</a>
+      <a href="blog.html" class="nav-item">Blog</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <a class="btn-book">Book Taxi</a>
+      <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- OVERLAY -->
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobileMenu">
+  <a href="index.html" class="mob-item">Home</a>
+  <a href="about.html" class="mob-item">About</a>
+  <a href="service.html" class="mob-item">Service</a>
+  <a href="package.html" class="mob-item">Package</a>
+  <a href="gallery.html" class="mob-item">Gallery</a>
+  <a href="blog.html" class="mob-item">Blog</a>
+  <a href="contact.html" class="mob-item">Contact</a>
+</div>
+
+
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+  document.getElementById("overlay").classList.toggle("active");
+}
+</script>
+
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-white text-uppercase">Sambalpur Bolangir TOUR PACKAGE</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                     <p class="m-0 text-uppercase"><a class="text-white" href="">Package</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Sambalpur Bolangir TOUR PACKAGE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <style>
+/* ===== SECTION ===== */
+.pkg-detail-sec{
+    background:#f5f5f5;
+    padding:60px 20px;
+    
+}
+
+/* ===== CONTAINER ===== */
+.pkg-box{
+    max-width:1200px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== TITLE ===== */
+.pkg-title{
+    font-size:28px;
+    font-weight:600;
+    color:#F4A621;
+    margin-bottom:15px;
+}
+
+/* ===== DESCRIPTION ===== */
+.pkg-desc{
+    font-size:15px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* ===== INFO ===== */
+.pkg-info{
+    margin-top:15px;
+}
+
+.pkg-info strong{
+    color:#333;
+}
+
+/* ===== LIST ===== */
+.pkg-list{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.pkg-list li{
+    margin-bottom:8px;
+    color:#555;
+}
+
+/* ===== HIGHLIGHT ===== */
+.pkg-highlight{
+    color:#F4A621;
+    font-weight:600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .pkg-box{
+        padding:25px;
+    }
+
+    .pkg-title{
+        font-size:22px;
+    }
+}
+</style>
+
+<section class="pkg-detail-sec">
+
+    <div class="pkg-box">
+
+        <!-- TITLE -->
+        <div class="pkg-title">Sambalpur Bolangir Tour Package</div>
+
+        <!-- DESCRIPTION -->
+        <div class="pkg-desc">
+            Bhubaneswar – Saptasajya – Sambalpur – Samaleswari Temple – Hirakud Dam – Ghanteswari Temple – Humma Dam – Bolangir – Harishankar – Nrusinghnath – Bhubaneswar
+        </div>
+
+        <!-- DURATION -->
+        <div class="pkg-info">
+            <strong>Duration:</strong> 
+            <span class="pkg-highlight">03 Days and 02 Nights</span>
+        </div>
+
+        <!-- VEHICLE -->
+        <div class="pkg-info">
+            <strong>Vehicle Provide:</strong>
+            <ul class="pkg-list">
+                <li><strong>Innova Crysta</strong> – for 6 Persons</li>
+                <li><strong>Traveller</strong> – Minimum 12 or Maximum 26 Persons</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<style>
+
+/* ===== SECTION ===== */
+.pkg-overview-sec{
+    
+    padding:0px 20px;
+    
+}
+
+/* ===== WRAPPER ===== */
+.pkg-overview-wrap{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+/* ===== LEFT CONTENT CARD ===== */
+.pkg-overview-content{
+    background:#fff;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    position:relative;
+}
+
+/* ACCENT LINE */
+.pkg-overview-content::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:6px;
+    height:100%;
+    background:#F4A621;
+    border-radius:10px 0 0 10px;
+}
+
+/* ===== TITLE ===== */
+.pkg-overview-title{
+    font-size:30px;
+    color:#222;
+    font-weight:700;
+    margin-bottom:20px;
+    line-height:1.3;
+}
+
+/* HIGHLIGHT WORD */
+.pkg-overview-title span{
+    color:#F4A621;
+}
+
+/* ===== TEXT ===== */
+.pkg-overview-text{
+    font-size:15.5px;
+    color:#555;
+    line-height:1.9;
+}
+
+.pkg-overview-text p{
+    margin-bottom:18px;
+}
+
+/* STRONG HIGHLIGHT */
+.pkg-overview-text strong{
+    color:#222;
+    font-weight:600;
+}
+
+/* ===== IMAGE ===== */
+.pkg-overview-img{
+    position:relative;
+    overflow:hidden;
+    border-radius:14px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.pkg-overview-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.6s;
+}
+
+/* HOVER ZOOM */
+.pkg-overview-img:hover img{
+    transform:scale(1.08);
+}
+
+/* OVERLAY */
+.pkg-overview-img::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(0,0,0,0.4),transparent);
+}
+
+/* BADGE */
+.pkg-badge{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    background:#F4A621;
+    color:#fff;
+    padding:8px 16px;
+    font-size:13px;
+    border-radius:30px;
+    letter-spacing:1px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .pkg-overview-wrap{
+        grid-template-columns:1fr;
+    }
+
+    .pkg-overview-content{
+        padding:25px;
+    }
+
+    .pkg-overview-title{
+        font-size:24px;
+    }
+}
+
+</style>
+
+<section class="pkg-overview-sec">
+
+    <div class="pkg-overview-wrap">
+
+        <!-- LEFT CONTENT -->
+        <div class="pkg-overview-content">
+
+            <div class="pkg-overview-title">
+                Bhubaneswar – Sambalpur <span>Bolangir Tour Overview</span>
+            </div>
+
+            <div class="pkg-overview-text">
+
+                <p>
+                    This tour takes you through the cultural, historical, and spiritual highlights of western Odisha, blending sacred temples, serene landscapes, and iconic engineering marvels. Starting from Bhubaneswar, the journey unfolds with a visit to the scenic hill shrine of Saptasajya, before heading towards Sambalpur, home to the revered Samaleswari Temple.
+                </p>
+
+                <p>
+                    The following day takes you to the world-famous Hirakud Dam, one of the longest earthen dams in the world, along with the sacred Ghanteswari Temple and the peaceful surroundings of Humma Dam, before continuing to Bolangir.
+                </p>
+
+                <p>
+                    The final day explores the spiritual and natural charm of Harishankar Temple and Nrusinghnath Temple, nestled on opposite slopes of the Gandhamardan Hills. The tour concludes with a return to Bhubaneswar, carrying memories of temples, hills, and river valleys.
+                </p>
+
+                <p>
+                    This package offers a perfect mix of spirituality, heritage, and natural beauty — ideal for travelers seeking both devotion and exploration in western Odisha.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="pkg-overview-img">
+            <img src="img/about.webp" alt="Puri Temple">
+            <div class="pkg-badge">Western Odisha Tour</div>
+        </div>
+
+    </div>
+
+</section>
+<style>
+
+/* ===== SECTION ===== */
+.pkg-combo-sec{
+    background:#f5f5f5;
+    padding:80px 20px;
+    font-family:'Poppins', sans-serif;
+}
+
+/* ===== WRAPPER ===== */
+.pkg-combo-wrap{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:40px;
+}
+
+/* ===== CARD ===== */
+.pkg-box{
+    background:#fff;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+    position:relative;
+}
+
+/* ACCENT LINE */
+.pkg-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:5px;
+    height:100%;
+    background:#F4A621;
+    border-radius:10px 0 0 10px;
+}
+
+/* ===== TITLE ===== */
+.pkg-title{
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:20px;
+    color:#222;
+}
+
+/* ===== LIST ===== */
+.pkg-list{
+    list-style:none;
+    padding:0;
+}
+
+.pkg-list li{
+    margin-bottom:12px;
+    font-size:14.5px;
+    color:#555;
+    display:flex;
+}
+
+.pkg-list li::before{
+    content:"✔";
+    color:#F4A621;
+    margin-right:10px;
+}
+
+/* ===== FAQ ===== */
+.faq-title{
+    font-size:24px;
+   
+    color:#F4A621;
+    margin-bottom:20px;
+}
+
+/* FAQ ITEM */
+.faq-item{
+    border-bottom:1px solid #eee;
+}
+
+/* QUESTION */
+.faq-question{
+    padding:15px 10px;
+    cursor:pointer;
+    font-weight:600;
+    color:#222;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:0.3s;
+}
+
+.faq-question:hover{
+    color:#F4A621;
+}
+
+/* ICON */
+.faq-icon{
+    font-size:18px;
+    transition:0.3s;
+}
+
+/* ANSWER */
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    font-size:14.5px;
+    color:#555;
+    line-height:1.8;
+    padding:0 10px;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-answer{
+    max-height:300px;
+    padding-bottom:15px;
+}
+
+.faq-item.active .faq-icon{
+    transform:rotate(45deg);
+    color:#F4A621;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .pkg-combo-wrap{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+
+<section class="pkg-combo-sec">
+
+    <div class="pkg-combo-wrap">
+
+        <!-- LEFT: HIGHLIGHTS -->
+        <div class="pkg-box">
+
+            <div class="pkg-title">Tour Highlights</div>
+
+            <ul class="pkg-list">
+    <li><strong>Bhubaneswar</strong> – Starting point of the journey.</li>
+    <li><strong>Saptasajya</strong> – Scenic hill temple surrounded by forests.</li>
+    <li><strong>Sambalpur</strong> – Visit the revered Samaleswari Temple.</li>
+    <li><strong>Hirakud Dam</strong> – World’s longest earthen dam.</li>
+    <li><strong>Ghanteswari Temple</strong> – Unique temple of bells on the river bank.</li>
+    <li><strong>Humma Dam</strong> – A serene waterbody for relaxation.</li>
+    <li><strong>Bolangir</strong> – Gateway to the Gandhamardan Hills.</li>
+    <li><strong>Harishankar Temple</strong> – Sacred site on the southern slope of Gandhamardan.</li>
+    <li><strong>Nrusinghnath Temple</strong> – Ancient temple on the northern slope of Gandhamardan.</li>
+</ul>
+
+        </div>
+
+      <!-- RIGHT: FAQ -->
+<div class="pkg-box">
+
+    <div class="faq-title">
+        Why Choose This Sambalpur – Hirakud – Gandhamardan Tour?
+    </div>
+
+    <!-- ITEM 1 -->
+    <div class="faq-item active">
+        <div class="faq-question">
+            Spiritual & Scenic Journey Combination
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            This tour beautifully combines spiritual destinations like Samaleswari Temple, Harishankar Temple, and Nrusinghnath Temple with scenic natural spots like Saptasajya and Gandhamardan Hills.
+        </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="faq-item">
+        <div class="faq-question">
+            Visit India’s Longest Earthen Dam
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            Experience the grandeur of Hirakud Dam, the world’s longest earthen dam, offering breathtaking views and a unique engineering marvel.
+        </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="faq-item">
+        <div class="faq-question">
+            Unique Temples & Cultural Heritage
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            Explore unique temples like Ghanteswari Temple (Temple of Bells) and ancient heritage sites deeply connected with Odisha’s culture and traditions.
+        </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="faq-item">
+        <div class="faq-question">
+            Nature & Peaceful Environment
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            Enjoy peaceful surroundings at Humma Dam, Saptasajya hills, and Gandhamardan ranges, perfect for relaxation and nature lovers.
+        </div>
+    </div>
+
+    <!-- ITEM 5 -->
+    <div class="faq-item">
+        <div class="faq-question">
+            Perfect for Pilgrimage & Exploration
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            This package is ideal for pilgrims, families, and explorers looking for a mix of devotion, history, and scenic beauty in one journey.
+        </div>
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(item => {
+    item.addEventListener("click", () => {
+        const parent = item.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(el => {
+            if(el !== parent) el.classList.remove("active");
+        });
+
+        parent.classList.toggle("active");
+    });
+});
+</script>
+
+
+<style>
+
+/* ===== SECTION ===== */
+.pkg-detail-sec{
+    background:linear-gradient(180deg,#f9f9f9,#f1f1f1);
+    padding:30px 20px;
+}
+
+/* ===== WRAPPER ===== */
+.pkg-detail-wrap{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===== TITLE ===== */
+.pkg-detail-title{
+    font-size:30px;
+    color:#F4A621;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+/* ===== INTRO TEXT ===== */
+.pkg-detail-text{
+    font-size:15.5px;
+    color:#555;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+.pkg-detail-text p{
+    margin-bottom:18px;
+}
+
+/* ===== TIMELINE ===== */
+.pkg-timeline{
+    position:relative;
+    margin-top:20px;
+}
+
+/* CENTER LINE */
+.pkg-timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#F4A621;
+    transform:translateX(-50%);
+}
+
+/* ===== ITEM ===== */
+.pkg-item{
+    width:50%;
+    padding:20px 40px;
+    position:relative;
+}
+
+/* LEFT */
+.pkg-item.left{
+    left:0;
+    text-align:right;
+}
+
+/* RIGHT */
+.pkg-item.right{
+    left:50%;
+}
+
+/* DOT */
+.pkg-item::before{
+    content:"";
+    position:absolute;
+    top:25px;
+    width:14px;
+    height:14px;
+    background:#F4A621;
+    border-radius:50%;
+    z-index:2;
+}
+
+/* DOT POSITION */
+.pkg-item.left::before{
+    right:-7px;
+}
+.pkg-item.right::before{
+    left:-7px;
+}
+
+/* CARD */
+.pkg-card{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* DAY TITLE */
+.pkg-day-title{
+    font-size:18px;
+    font-weight:600;
+    color:#222;
+    margin-bottom:10px;
+}
+
+/* TEXT */
+.pkg-card p{
+    font-size:14.5px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+/* STRONG */
+.pkg-card strong{
+    color:#222;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+
+    .pkg-timeline::before{
+        left:8px;
+    }
+
+    .pkg-item{
+        width:100%;
+        padding-left:30px;
+        padding-right:15px;
+        margin-bottom:30px;
+    }
+
+    .pkg-item.left,
+    .pkg-item.right{
+        left:0;
+        text-align:left;
+    }
+
+    .pkg-item::before{
+        left:0;
+    }
+}
+
+</style>
+
+<section class="pkg-detail-sec">
+
+    <div class="pkg-detail-wrap">
+
+       
+
+        <!-- TITLE -->
+        <div class="pkg-detail-title">Bhubaneswar – Sambalpur – Bolangir Tour Details</div>
+
+        <!-- INFO -->
+        <div class="pkg-info">
+            <strong>Duration:</strong> 03 Days / 02 Nights<br><br>
+
+            <strong>Vehicle Provide:</strong>
+            <ul>
+                <li>Innova Crysta – for 6 Persons</li>
+                <li>Traveller – Minimum 12 or Maximum 26 Persons</li>
+            </ul>
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="pkg-timeline">
+
+            <!-- DAY 1 -->
+            <div class="pkg-item left">
+                <div class="pkg-card">
+                    <div class="pkg-day-title">Day 01: Bhubaneswar – Saptasajya – Sambalpur</div>
+                    <p>
+                        Pickup from Bhubaneswar in the morning. Drive to Saptasajya, a scenic hill and temple complex surrounded by forests.
+                        After sightseeing, continue the journey towards Sambalpur. Upon arrival, visit the famous Samaleswari Temple,
+                        the presiding deity of Sambalpur. Evening free at leisure.
+                    </p>
+                    <p><strong>Overnight in Sambalpur</strong></p>
+                </div>
+            </div>
+
+            <!-- DAY 2 -->
+            <div class="pkg-item right">
+                <div class="pkg-card">
+                    <div class="pkg-day-title">Day 02: Sambalpur – Hirakud – Ghanteswari – Bolangir</div>
+                    <p>
+                        After breakfast, visit Hirakud Dam, one of the longest earthen dams in the world. Later, proceed to Ghanteswari Temple,
+                        known as the “Temple of Bells”. Continue your journey with a stop at Humma Dam before heading towards Bolangir.
+                    </p>
+                    <p><strong>Overnight in Bolangir</strong></p>
+                </div>
+            </div>
+
+            <!-- DAY 3 -->
+            <div class="pkg-item left">
+                <div class="pkg-card">
+                    <div class="pkg-day-title">Day 03: Bolangir – Harishankar – Nrusinghnath – Bhubaneswar</div>
+                    <p>
+                        Morning drive to Harishankar Temple, located at the foothills of Gandhamardan Hills. Then visit Nrusinghnath Temple,
+                        a sacred pilgrimage spot on the opposite slope of the hills. After sightseeing, return to Bhubaneswar for drop at your desired location.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  
+
+
+
+
+
+
+   <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <img src="img/logo.webp" alt="" style=" width: 200px;">
+                </a>
+                <p>Advenza Tours & Travels offers reliable cab services and customized tour packages for comfortable, affordable journeys.</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+    
+    <a class="btn btn-square mr-2" href="#"
+       style="border:1px solid #F4A621; color:#F4A621;">
+       <i class="fab fa-twitter"></i>
+    </a>
+
+    <a class="btn btn-square mr-2" href="#"
+       style="border:1px solid #F4A621; color:#F4A621;">
+       <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a class="btn btn-square mr-2" href="#"
+       style="border:1px solid #F4A621; color:#F4A621;">
+       <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a class="btn btn-square" href="#"
+       style="border:1px solid #F4A621; color:#F4A621;">
+       <i class="fab fa-instagram"></i>
+    </a>
+
+</div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    
+                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    
+                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+
+
+     <!-- MAP -->
+   <div class="map-box mb-1">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.216204812192!2d85.86819867428513!3d20.29974761241981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190b0052e7e17f%3A0x49a28d7b4e807d45!2sADVENZA%20TOUR&#39;S%20AND%20TRAVEL!5e1!3m2!1sen!2sin!4v1776492370905!5m2!1sen!2sin"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+    
+
+    <!-- Address -->
+    <p>
+        <i class="fa fa-map-marker-alt mr-2"></i>
+        <a href="https://share.google/XEw0MIOWUYqolAqZv" target="_blank">
+            Prachivihar, Palasuni, Bhubaneswar – 751025
+        </a>
+    </p>
+
+    <!-- Phone -->
+    <p>
+        <i class="fa fa-phone-alt mr-2"></i>
+        <a href="tel:+918328806162">+91 8328806162</a>
+    </p>
+
+    <!-- Email -->
+    <p>
+        <i class="fa fa-envelope mr-2"></i>
+        <a href="mailto:advenzatoours99@gmail.com">advenzatoours99@gmail.com</a>
+    </p>
+
+   
+</div>
+
+<style>
+.map-box{
+    border-radius:12px;
+    overflow:hidden;
+    margin-top:10px;
+}
+.map-box iframe{
+    width:100%;
+    height:180px;
+    border:0;
+}
+</style>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <!--/*** The author’s attribution link below must remain intact on your website. ***/-->
+                <!--/*** If you wish to remove this credit link, please purchase the Pro Version from https://htmlcodex.com . ***/-->
+                <!-- <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com" style="color: #F4A621;">HTML Codex</a></p> -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #F4A621; color: #fff;"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
