@@ -271,7 +271,12 @@ a{
     <div class="topbar-left">
       <div class="topbar-item">
   <i class="fa fa-phone-alt"></i> 
-  <a href="tel:+918328806162">+91 8328806162</a>
+  
+  <a href="tel:+917609934471">+91 7609934471</a>
+  /
+  <a href="tel:+917609934471">+91 7609934471</a>
+  
+
 </div>
 
 <div class="topbar-item">
@@ -282,8 +287,8 @@ a{
 
     <div class="topbar-right">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@AdvenzaToursandTravel"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/advenza_tours?igsh=MWVsM2g1NnEzeTYyeg=="><i class="fab fa-instagram"></i></a>
     </div>
   </div>
 </div>
@@ -308,7 +313,8 @@ a{
     </nav>
 
     <div class="nav-right">
-      <a class="btn-book">Book Taxi</a>
+      
+ <a class="btn-book" href="tel:7609934471">Book Taxi</a>
       <div class="menu-btn" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
       </div>
@@ -337,6 +343,157 @@ a{
 function toggleMenu(){
   document.getElementById("mobileMenu").classList.toggle("active");
   document.getElementById("overlay").classList.toggle("active");
+}
+</script>
+
+
+ <!-- FLOATING CONTACT START -->
+<div class="floating-container">
+  <div class="floating-stack">
+
+    <!-- Toggle Button -->
+    <div class="floating-toggle-btn" onclick="toggleContact()">
+      <i id="toggleIcon" class="fas fa-chevron-right"></i>
+    </div>
+
+    <!-- Contact Buttons -->
+    <div id="contactWrapper" class="floating-contact-wrapper open">
+
+      <!-- WhatsApp -->
+      <a 
+  href="https://wa.me/7609934471?text=Hello! I would like to book a taxi / tour package. Please share details about pricing, availability, and destinations." 
+  target="_blank"
+  class="floating-btn whatsapp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+      <!-- Call -->
+      <a href="tel:8328806162" class="floating-btn call">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+<!-- FLOATING CONTACT END -->
+
+<style>
+  /* ================= CONTAINER ================= */
+
+.floating-container {
+  position: fixed;
+  right: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+/* Vertical Stack */
+.floating-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ================= TOGGLE BUTTON ================= */
+
+.floating-toggle-btn {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px 0 0 8px;
+  font-size: 20px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  margin-bottom: 8px;
+}
+
+/* ================= CONTACT WRAPPER ================= */
+
+.floating-contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.floating-contact-wrapper.open {
+  width: 50px;
+  opacity: 1;
+}
+
+.floating-contact-wrapper.closed {
+  width: 0;
+  opacity: 0;
+}
+
+/* ================= BUTTONS ================= */
+
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.floating-btn.whatsapp {
+  background: #25d366;
+}
+
+.floating-btn.call {
+  background: #1d4ed8;
+  border-radius: 0 0 0 18px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .floating-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .floating-toggle-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+</style>
+
+<script>
+let open = true;
+
+function toggleContact() {
+  const wrapper = document.getElementById("contactWrapper");
+  const icon = document.getElementById("toggleIcon");
+
+  open = !open;
+
+  if (open) {
+    wrapper.classList.add("open");
+    wrapper.classList.remove("closed");
+    icon.classList.remove("fa-chevron-left");
+    icon.classList.add("fa-chevron-right");
+  } else {
+    wrapper.classList.add("closed");
+    wrapper.classList.remove("open");
+    icon.classList.remove("fa-chevron-right");
+    icon.classList.add("fa-chevron-left");
+  }
 }
 </script>
 
@@ -908,7 +1065,8 @@ function toggleMenu(){
                     <div>👥 4 Doors, 7-8 Seats</div>
                     <div>⚙️ Transmission: Automatic/Manual</div>
                 </div>
-                <a href="#" class="car-btn">RESERVE NOW</a>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
             </div>
         </div>
 
@@ -925,7 +1083,8 @@ function toggleMenu(){
                     <div>👥 4 Doors, 7 Seats</div>
                     <div>⚙️ Transmission: Automatic/Manual</div>
                 </div>
-                <a href="#" class="car-btn">RESERVE NOW</a>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
             </div>
         </div>
 
@@ -942,7 +1101,8 @@ function toggleMenu(){
                     <div>👥 4 Doors, 5 Seats</div>
                     <div>⚙️ Transmission: Automatic/Manual</div>
                 </div>
-                <a href="#" class="car-btn">RESERVE NOW</a>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
             </div>
         </div>
 
@@ -961,7 +1121,8 @@ function toggleMenu(){
                     <div>👥 4 Doors, 5 Seats</div>
                     <div>⚙️ Transmission: Automatic/Manual</div>
                 </div>
-                <a href="#" class="car-btn">RESERVE NOW</a>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
             </div>
         </div>
 
@@ -978,7 +1139,8 @@ function toggleMenu(){
                     <div>👥 5 Doors, 7 Seats</div>
                     <div>⚙️ Transmission: Automatic/Manual</div>
                 </div>
-                <a href="#" class="car-btn">RESERVE NOW</a>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
             </div>
         </div>
 
@@ -995,7 +1157,108 @@ function toggleMenu(){
                     <div>👥 5 Doors, 7 Seats</div>
                     <div>⚙️ Transmission: Automatic/Manual</div>
                 </div>
-                <a href="#" class="car-btn">RESERVE NOW</a>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
+            </div>
+        </div>
+
+        <!-- ERTIGA -->
+        <div class="car-card">
+            <div class="car-img">
+                <img src="img/dzire.webp" alt="">
+            </div>
+            <div class="car-content">
+                <div class="car-title">DZIRE</div>
+                <div class="car-price">Starting ₹ 12/km</div>
+                <div class="car-info">
+                    <div>🚗 Vehicle Type: Sedan</div>
+                    <div>👥 4 Doors, 5 Seats</div>
+                    <div>⚙️ Transmission: Automatic/Manual</div>
+                </div>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
+            </div>
+        </div>
+
+
+        <div class="car-card">
+            <div class="car-img">
+                <img src="img/amaze.webp" alt="">
+            </div>
+            <div class="car-content">
+                <div class="car-title">AMAZE</div>
+                <div class="car-price">Starting ₹ 12/km</div>
+                <div class="car-info">
+                    <div>🚗 Vehicle Type: Sedan</div>
+                    <div>👥 4 Doors, 5 Seats</div>
+                    <div>⚙️ Transmission: Automatic/Manual</div>
+                </div>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
+            </div>
+        </div>
+        <div class="car-card">
+            <div class="car-img">
+                <img src="img/tabera.webp" alt="">
+            </div>
+            <div class="car-content">
+                <div class="car-title">TABERA</div>
+                <div class="car-price">Starting ₹ 16/km</div>
+                <div class="car-info">
+                    <div>🚗 Vehicle Type: MPV</div>
+                    <div>👥 4 Doors, 7-9 Seats</div>
+                    <div>⚙️ Transmission: Automatic/Manual</div>
+                </div>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
+            </div>
+        </div>  
+        <div class="car-card">
+            <div class="car-img">
+                <img src="img/creata.webp" alt="">
+            </div>
+            <div class="car-content">
+                <div class="car-title">CRETA</div>
+                <div class="car-price">Starting ₹ 14/km</div>
+                <div class="car-info">
+                    <div>🚗 Vehicle Type: SUV</div>
+                    <div>👥 5 Doors, 5 Seats</div>
+                    <div>⚙️ Transmission: Automatic/Manual</div>
+                </div>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
+            </div>
+        </div>
+        <div class="car-card">
+            <div class="car-img">
+                <img src="img/traveller.webp" alt="">
+            </div>
+            <div class="car-content">
+                <div class="car-title">Traveller</div>
+                <div class="car-price">Starting ₹ 24/km</div>
+                <div class="car-info">
+                    <div>🚗 Vehicle Type: LCV</div>
+                    <div>👥 13 Seats</div>
+                    <div>⚙️ Transmission: Automatic/Manual</div>
+                </div>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
+            </div>
+        </div>
+        <div class="car-card">
+            <div class="car-img">
+                <img src="img/traveller-17.webp" alt="">
+            </div>
+            <div class="car-content">
+                <div class="car-title">Traveller</div>
+                <div class="car-price">Starting ₹ 27/km</div>
+                <div class="car-info">
+                    <div>🚗 Vehicle Type: MPV</div>
+                    <div>👥 17 Seats</div>
+                    <div>⚙️ Transmission: Automatic/Manual</div>
+                </div>
+                
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
             </div>
         </div>
 
@@ -1716,22 +1979,21 @@ window.addEventListener("resize", () => {
                 <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
                 <div class="d-flex justify-content-start">
     
-    <a class="btn btn-square mr-2" href="#"
-       style="border:1px solid #F4A621; color:#F4A621;">
-       <i class="fab fa-twitter"></i>
-    </a>
+    
 
-    <a class="btn btn-square mr-2" href="#"
+     <a class="btn btn-square mr-2" href="#"
        style="border:1px solid #F4A621; color:#F4A621;">
        <i class="fab fa-facebook-f"></i>
     </a>
+    <a class="btn btn-square mr-2" href="https://www.youtube.com/@AdvenzaToursandTravel" 
+   style="border:1px solid #F4A621; color:#F4A621;">
+   <i class="fab fa-youtube"></i>
+</a>
 
-    <a class="btn btn-square mr-2" href="#"
-       style="border:1px solid #F4A621; color:#F4A621;">
-       <i class="fab fa-linkedin-in"></i>
-    </a>
+    
 
-    <a class="btn btn-square" href="#"
+    <a class="btn btn-square" href="https://www.instagram.com/advenza_tours?igsh=MWVsM2g1NnEzeTYyeg=="
+      <a class="btn btn-square" href="https://www.instagram.com/advenza_tours?igsh=MWVsM2g1NnEzeTYyeg=="
        style="border:1px solid #F4A621; color:#F4A621;">
        <i class="fab fa-instagram"></i>
     </a>
@@ -1786,7 +2048,10 @@ window.addEventListener("resize", () => {
     <!-- Phone -->
     <p>
         <i class="fa fa-phone-alt mr-2"></i>
-        <a href="tel:+918328806162">+91 8328806162</a>
+        
+<a href="tel:+918328806162">+91 8328806162</a>
+  /
+  <a href="tel:+917609934471">+91 7609934471</a>
     </p>
 
     <!-- Email -->
