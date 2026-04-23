@@ -254,14 +254,14 @@ require_once 'includes/track_view.php'; ?>
     <!-- Hero Section -->
     <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Health & Wellness Blog</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Travel Stories</h1>
 
 
             <!-- Search and Filter -->
             <div class="max-w-2xl mx-auto">
                 <form method="GET"
                     class="flex flex-col md:flex-row gap-4 bg-white p-2 rounded-2xl shadow-lg border border-gray-100">
-                    <input type="text" name="search" placeholder="Search medical articles..."
+                    <input type="text" name="search" placeholder="Search articles..."
                         value="<?php echo htmlspecialchars($search); ?>"
                         class="flex-1 px-5 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50">
                     <select name="category"

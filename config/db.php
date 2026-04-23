@@ -4,9 +4,16 @@ session_start();
 // Database Variables
 
 
+// $Host = 'localhost';
+// $DBUser = 'root';
+// $DBPass = 'root';
+// $DB = 'shreemanyata_db';
+// $Charset = 'utf8mb4';
+
+
 $Host = 'localhost';
-$DBUser = 'root';
-$DBPass = '';
+$DBUser = 'scott';
+$DBPass = 'tiger';
 $DB = 'advenzatourstravel';
 $Charset = 'utf8mb4';
 
