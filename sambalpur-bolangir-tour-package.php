@@ -1,12 +1,10 @@
+<?php require_once 'config/db.php';
+require_once 'includes/track_view.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>TRAVELER - Free Travel Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <?php include 'includes/seo_tags.php'; ?>
 
     <!-- Favicon -->
      <link href="img/logo.ico" rel="icon">
@@ -294,13 +292,13 @@ a{
     </div>
 
     <nav class="nav-menu">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="about.html" class="nav-item">About</a>
-       <a href="service.html" class="nav-item">Service</a>
-      <a href="package.html" class="nav-item">Package</a>
-      <a href="gallery.html" class="nav-item">Gallery</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="index.php" class="nav-item">Home</a>
+      <a href="about.php" class="nav-item">About</a>
+       <a href="service.php" class="nav-item">Service</a>
+      <a href="package.php" class="nav-item">Package</a>
+      <a href="gallery.php" class="nav-item">Gallery</a>
+      <a href="blog.php" class="nav-item">Blog</a>
+      <a href="contact.php" class="nav-item">Contact</a>
     </nav>
 
     <div class="nav-right">
@@ -320,13 +318,13 @@ a{
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobileMenu">
-  <a href="index.html" class="mob-item">Home</a>
-  <a href="about.html" class="mob-item">About</a>
-  <a href="service.html" class="mob-item">Service</a>
-  <a href="package.html" class="mob-item">Package</a>
-  <a href="gallery.html" class="mob-item">Gallery</a>
-  <a href="blog.html" class="mob-item">Blog</a>
-  <a href="contact.html" class="mob-item">Contact</a>
+  <a href="index.php" class="mob-item">Home</a>
+  <a href="about.php" class="mob-item">About</a>
+  <a href="service.php" class="mob-item">Service</a>
+  <a href="package.php" class="mob-item">Package</a>
+  <a href="gallery.php" class="mob-item">Gallery</a>
+  <a href="blog.php" class="mob-item">Blog</a>
+  <a href="contact.php" class="mob-item">Contact</a>
 </div>
 
 
@@ -495,13 +493,13 @@ function toggleContact() {
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Koraput TOUR PACKAGE</h3>
+                <h3 class="display-4 text-white text-uppercase">Sambalpur Bolangir TOUR PACKAGE</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
                      <p class="m-0 text-uppercase"><a class="text-white" href="">Package</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Koraput TOUR PACKAGE</p>
+                    <p class="m-0 text-uppercase">Sambalpur Bolangir TOUR PACKAGE</p>
                 </div>
             </div>
         </div>
@@ -586,17 +584,17 @@ function toggleContact() {
     <div class="pkg-box">
 
         <!-- TITLE -->
-        <div class="pkg-title">Koraput Tour Package</div>
+        <div class="pkg-title">Sambalpur Bolangir Tour Package</div>
 
         <!-- DESCRIPTION -->
         <div class="pkg-desc">
-            Bhubaneswar – Chilika Lake – Gopalpur Beach – Taptapani – Chandragiri – Similiguda – Raniduduma – Deomali – Kutia – Gupteswar Temple – Jagannath Temple – Kolab Dam – Similiguda – Bhubaneswar
+            Bhubaneswar – Saptasajya – Sambalpur – Samaleswari Temple – Hirakud Dam – Ghanteswari Temple – Humma Dam – Bolangir – Harishankar – Nrusinghnath – Bhubaneswar
         </div>
 
         <!-- DURATION -->
         <div class="pkg-info">
             <strong>Duration:</strong> 
-            <span class="pkg-highlight">05 Days and 04 Nights</span>
+            <span class="pkg-highlight">03 Days and 02 Nights</span>
         </div>
 
         <!-- VEHICLE -->
@@ -604,7 +602,7 @@ function toggleContact() {
             <strong>Vehicle Provide:</strong>
             <ul class="pkg-list">
                 <li><strong>Innova Crysta</strong> – for 6 Persons</li>
-                <li><strong>Traveller</strong> – Minimum 12 or Maximum 26</li>
+                <li><strong>Traveller</strong> – Minimum 12 or Maximum 26 Persons</li>
             </ul>
         </div>
 
@@ -752,25 +750,25 @@ function toggleContact() {
         <div class="pkg-overview-content">
 
             <div class="pkg-overview-title">
-                <span>Koraput Tour Overview</span>
+                Bhubaneswar – Sambalpur <span>Bolangir Tour Overview</span>
             </div>
 
             <div class="pkg-overview-text">
 
                 <p>
-                   This Koraput Tour Package by Advenza Tours and Travel takes you through the cultural, natural, and spiritual highlights of southern Odisha. The journey begins from Bhubaneswar and offers a perfect blend of scenic landscapes, sacred temples, hill ranges, waterfalls, and tribal heritage, making it ideal for travelers seeking peace, nature, and cultural discovery.
+                    This tour takes you through the cultural, historical, and spiritual highlights of western Odisha, blending sacred temples, serene landscapes, and iconic engineering marvels. Starting from Bhubaneswar, the journey unfolds with a visit to the scenic hill shrine of Saptasajya, before heading towards Sambalpur, home to the revered Samaleswari Temple.
                 </p>
 
                 <p>
-                    Starting from Bhubaneswar, the route includes a visit to the serene Chilika Lake, followed by the coastal charm of Gopalpur Beach. The journey then moves towards Taptapani, known for its natural hot water springs, before reaching Chandragiri, home to a peaceful Tibetan settlement and monasteries. From here, you arrive at Similiguda, which serves as the base for exploring Koraput’s most beautiful and lesser-known attractions.
+                    The following day takes you to the world-famous Hirakud Dam, one of the longest earthen dams in the world, along with the sacred Ghanteswari Temple and the peaceful surroundings of Humma Dam, before continuing to Bolangir.
                 </p>
 
                 <p>
-                    Over the next days, this Koraput Tour Package takes you to the breathtaking Raniduduma Waterfall, the scenic hill ranges of Deomali and Kutia, and the sacred Gupteswar Temple, a revered cave shrine surrounded by lush greenery. You will also visit the Jagannath Temple and the tranquil Kolab Dam, offering a perfect balance of spirituality and natural beauty. After exploring the region, the tour concludes with a comfortable return to Bhubaneswar.
+                    The final day explores the spiritual and natural charm of Harishankar Temple and Nrusinghnath Temple, nestled on opposite slopes of the Gandhamardan Hills. The tour concludes with a return to Bhubaneswar, carrying memories of temples, hills, and river valleys.
                 </p>
 
                 <p>
-                   Koraput is known for its rolling hills, dense forests, waterfalls, and rich tribal culture. This tour offers a refreshing escape from city life, combining nature, spirituality, and adventure in one unforgettable journey. With expert planning and local knowledge, Advenza Tours and Travel ensures a smooth and memorable travel experience throughout your Koraput trip.
+                    This package offers a perfect mix of spirituality, heritage, and natural beauty — ideal for travelers seeking both devotion and exploration in western Odisha.
                 </p>
 
             </div>
@@ -780,7 +778,7 @@ function toggleContact() {
         <!-- RIGHT IMAGE -->
         <div class="pkg-overview-img">
             <img src="img/about.webp" alt="Puri Temple">
-            <div class="pkg-badge">Golden Triangle Tour</div>
+            <div class="pkg-badge">Western Odisha Tour</div>
         </div>
 
     </div>
@@ -928,84 +926,82 @@ function toggleContact() {
             <div class="pkg-title">Tour Highlights</div>
 
             <ul class="pkg-list">
-    <li><strong>Bhubaneswar</strong> – Starting point of the journey</li>
-    <li><strong>Chilika Lake</strong> – Asia’s largest brackish water lagoon</li>
-    <li><strong>Gopalpur Beach</strong> – Peaceful coastal destination</li>
-    <li><strong>Taptapani</strong> – Natural hot water springs</li>
-    <li><strong>Chandragiri</strong> – Tibetan settlement and monasteries</li>
-    <li><strong>Similiguda</strong> – Base for Koraput sightseeing</li>
-    <li><strong>Raniduduma Waterfall</strong> – Scenic and powerful waterfall</li>
-    <li><strong>Deomali & Kutia</strong> – Hill ranges with panoramic views</li>
-    <li><strong>Gupteswar Temple</strong> – Sacred cave shrine</li>
-    <li><strong>Jagannath Temple & Kolab Dam</strong> – Spiritual and natural attractions</li>
+    <li><strong>Bhubaneswar</strong> – Starting point of the journey.</li>
+    <li><strong>Saptasajya</strong> – Scenic hill temple surrounded by forests.</li>
+    <li><strong>Sambalpur</strong> – Visit the revered Samaleswari Temple.</li>
+    <li><strong>Hirakud Dam</strong> – World’s longest earthen dam.</li>
+    <li><strong>Ghanteswari Temple</strong> – Unique temple of bells on the river bank.</li>
+    <li><strong>Humma Dam</strong> – A serene waterbody for relaxation.</li>
+    <li><strong>Bolangir</strong> – Gateway to the Gandhamardan Hills.</li>
+    <li><strong>Harishankar Temple</strong> – Sacred site on the southern slope of Gandhamardan.</li>
+    <li><strong>Nrusinghnath Temple</strong> – Ancient temple on the northern slope of Gandhamardan.</li>
 </ul>
 
         </div>
 
-         <!-- RIGHT FAQ -->
-        <div class="pkg-box">
+      <!-- RIGHT: FAQ -->
+<div class="pkg-box">
 
-            <div class="faq-title">
-                Why Choose This Koraput – Chilika – Chandragiri Tour?
-            </div>
+    <div class="faq-title">
+        Why Choose This Sambalpur – Hirakud – Gandhamardan Tour?
+    </div>
 
-            <!-- ITEM 1 -->
-            <div class="faq-item active">
-                <div class="faq-question">
-                    Coastal & Hill Station Combination
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    This tour offers a perfect mix of coastal beauty like Gopalpur Beach and Chilika Lake along with scenic hill destinations like Deomali and Koraput region.
-                </div>
-            </div>
-
-            <!-- ITEM 2 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    Unique Spiritual & Cultural Experience
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Visit sacred places like Gupteswar Temple and Jagannath Temple, along with the peaceful Tibetan monasteries at Chandragiri.
-                </div>
-            </div>
-
-            <!-- ITEM 3 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    Natural Wonders & Scenic Landscapes
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Explore breathtaking spots including Raniduduma Waterfall, Kolab Dam, and panoramic hill views of Deomali & Kutia.
-                </div>
-            </div>
-
-            <!-- ITEM 4 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    Relaxation & Wellness Spots
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Enjoy peaceful environments at Taptapani hot springs and Chilika Lake, perfect for relaxation and rejuvenation.
-                </div>
-            </div>
-
-            <!-- ITEM 5 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    Ideal for Nature & Offbeat Travelers
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    This package is ideal for travelers looking for offbeat destinations, nature exploration, photography, and cultural experiences.
-                </div>
-            </div>
-
+    <!-- ITEM 1 -->
+    <div class="faq-item active">
+        <div class="faq-question">
+            Spiritual & Scenic Journey Combination
+            <span class="faq-icon">+</span>
         </div>
+        <div class="faq-answer">
+            This tour beautifully combines spiritual destinations like Samaleswari Temple, Harishankar Temple, and Nrusinghnath Temple with scenic natural spots like Saptasajya and Gandhamardan Hills.
+        </div>
+    </div>
 
+    <!-- ITEM 2 -->
+    <div class="faq-item">
+        <div class="faq-question">
+            Visit India’s Longest Earthen Dam
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            Experience the grandeur of Hirakud Dam, the world’s longest earthen dam, offering breathtaking views and a unique engineering marvel.
+        </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="faq-item">
+        <div class="faq-question">
+            Unique Temples & Cultural Heritage
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            Explore unique temples like Ghanteswari Temple (Temple of Bells) and ancient heritage sites deeply connected with Odisha’s culture and traditions.
+        </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="faq-item">
+        <div class="faq-question">
+            Nature & Peaceful Environment
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            Enjoy peaceful surroundings at Humma Dam, Saptasajya hills, and Gandhamardan ranges, perfect for relaxation and nature lovers.
+        </div>
+    </div>
+
+    <!-- ITEM 5 -->
+    <div class="faq-item">
+        <div class="faq-question">
+            Perfect for Pilgrimage & Exploration
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            This package is ideal for pilgrims, families, and explorers looking for a mix of devotion, history, and scenic beauty in one journey.
+        </div>
+    </div>
+
+</div>
 
     </div>
 
@@ -1176,8 +1172,21 @@ document.querySelectorAll(".faq-question").forEach(item => {
 
     <div class="pkg-detail-wrap">
 
+       
+
         <!-- TITLE -->
-        <div class="pkg-detail-title">Koraput Tour Details</div>
+        <div class="pkg-detail-title">Bhubaneswar – Sambalpur – Bolangir Tour Details</div>
+
+        <!-- INFO -->
+        <div class="pkg-info">
+            <strong>Duration:</strong> 03 Days / 02 Nights<br><br>
+
+            <strong>Vehicle Provide:</strong>
+            <ul>
+                <li>Innova Crysta – for 6 Persons</li>
+                <li>Traveller – Minimum 12 or Maximum 26 Persons</li>
+            </ul>
+        </div>
 
         <!-- TIMELINE -->
         <div class="pkg-timeline">
@@ -1185,68 +1194,36 @@ document.querySelectorAll(".faq-question").forEach(item => {
             <!-- DAY 1 -->
             <div class="pkg-item left">
                 <div class="pkg-card">
-                    <div class="pkg-day-title">Day 01: Bhubaneswar – Chilika – Gopalpur – Taptapani</div>
+                    <div class="pkg-day-title">Day 01: Bhubaneswar – Saptasajya – Sambalpur</div>
                     <p>
-                        Your Koraput Tour Package begins with an early morning pickup from Bhubaneswar at 07:00 AM.
-                        En route, visit Chilika Lake followed by Gopalpur Beach.
+                        Pickup from Bhubaneswar in the morning. Drive to Saptasajya, a scenic hill and temple complex surrounded by forests.
+                        After sightseeing, continue the journey towards Sambalpur. Upon arrival, visit the famous Samaleswari Temple,
+                        the presiding deity of Sambalpur. Evening free at leisure.
                     </p>
-                    <p>
-                        Continue your journey towards Taptapani, famous for its natural hot water springs.
-                        Check in and enjoy a relaxed evening.
-                    </p>
-                    <p><strong>Overnight Stay:</strong> Taptapani</p>
-                    <p><strong>Meals:</strong> Not Included</p>
+                    <p><strong>Overnight in Sambalpur</strong></p>
                 </div>
             </div>
 
             <!-- DAY 2 -->
             <div class="pkg-item right">
                 <div class="pkg-card">
-                    <div class="pkg-day-title">Day 02: Taptapani – Chandragiri – Similiguda</div>
+                    <div class="pkg-day-title">Day 02: Sambalpur – Hirakud – Ghanteswari – Bolangir</div>
                     <p>
-                        After breakfast, visit Chandragiri, a Tibetan settlement known for monasteries and peaceful surroundings.
+                        After breakfast, visit Hirakud Dam, one of the longest earthen dams in the world. Later, proceed to Ghanteswari Temple,
+                        known as the “Temple of Bells”. Continue your journey with a stop at Humma Dam before heading towards Bolangir.
                     </p>
-                    <p>
-                        Continue to Similiguda, the base town for Koraput sightseeing. Check in and relax.
-                    </p>
-                    <p><strong>Overnight Stay:</strong> Similiguda</p>
-                    <p><strong>Meals:</strong> Breakfast</p>
+                    <p><strong>Overnight in Bolangir</strong></p>
                 </div>
             </div>
 
             <!-- DAY 3 -->
             <div class="pkg-item left">
                 <div class="pkg-card">
-                    <div class="pkg-day-title">Day 03: Similiguda – Raniduduma – Deomali – Kutia</div>
+                    <div class="pkg-day-title">Day 03: Bolangir – Harishankar – Nrusinghnath – Bhubaneswar</div>
                     <p>
-                        Visit Raniduduma Waterfall, one of the most scenic waterfalls in Koraput.
-                        Later explore Deomali Hills and Kutia Valley with panoramic views.
+                        Morning drive to Harishankar Temple, located at the foothills of Gandhamardan Hills. Then visit Nrusinghnath Temple,
+                        a sacred pilgrimage spot on the opposite slope of the hills. After sightseeing, return to Bhubaneswar for drop at your desired location.
                     </p>
-                    <p><strong>Overnight Stay:</strong> Similiguda</p>
-                    <p><strong>Meals:</strong> Breakfast</p>
-                </div>
-            </div>
-
-            <!-- DAY 4 -->
-            <div class="pkg-item right">
-                <div class="pkg-card">
-                    <div class="pkg-day-title">Day 04: Gupteswar – Jagannath Temple – Kolab Dam</div>
-                    <p>
-                        Visit Gupteswar Cave Temple, followed by Sabara Srikhetra Jagannath Temple and scenic Kolab Dam.
-                    </p>
-                    <p><strong>Overnight Stay:</strong> Similiguda</p>
-                    <p><strong>Meals:</strong> Breakfast</p>
-                </div>
-            </div>
-
-            <!-- DAY 5 -->
-            <div class="pkg-item left">
-                <div class="pkg-card">
-                    <div class="pkg-day-title">Day 05: Similiguda – Bhubaneswar</div>
-                    <p>
-                        After breakfast, return to Bhubaneswar and drop at your preferred location.
-                    </p>
-                    <p><strong>Meals:</strong> Breakfast & Dinner</p>
                 </div>
             </div>
 
@@ -1297,23 +1274,23 @@ document.querySelectorAll(".faq-question").forEach(item => {
             <div class="col-lg-2 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
                     
-                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.php"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.php"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
-                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="blog.php"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
-                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
-                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
-                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
                     
                 </div>
             </div>
@@ -1374,7 +1351,7 @@ document.querySelectorAll(".faq-question").forEach(item => {
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.php" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">

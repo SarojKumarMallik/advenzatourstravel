@@ -1,12 +1,11 @@
+<?php require_once 'config/db.php';
+require_once 'includes/track_view.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>TRAVELER - Free Travel Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <?php include 'includes/seo_tags.php'; ?>
 
     <!-- Favicon -->
      <link href="img/logo.ico" rel="icon">
@@ -294,13 +293,13 @@ a{
     </div>
 
     <nav class="nav-menu">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="about.html" class="nav-item">About</a>
-       <a href="service.html" class="nav-item">Service</a>
-      <a href="package.html" class="nav-item">Package</a>
-      <a href="gallery.html" class="nav-item">Gallery</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="index.php" class="nav-item">Home</a>
+      <a href="about.php" class="nav-item">About</a>
+       <a href="service.php" class="nav-item">Service</a>
+      <a href="package.php" class="nav-item">Package</a>
+      <a href="gallery.php" class="nav-item">Gallery</a>
+      <a href="blog.php" class="nav-item">Blog</a>
+      <a href="contact.php" class="nav-item">Contact</a>
     </nav>
 
     <div class="nav-right">
@@ -320,13 +319,13 @@ a{
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobileMenu">
-  <a href="index.html" class="mob-item">Home</a>
-  <a href="about.html" class="mob-item">About</a>
-  <a href="service.html" class="mob-item">Service</a>
-  <a href="package.html" class="mob-item">Package</a>
-  <a href="gallery.html" class="mob-item">Gallery</a>
-  <a href="blog.html" class="mob-item">Blog</a>
-  <a href="contact.html" class="mob-item">Contact</a>
+  <a href="index.php" class="mob-item">Home</a>
+  <a href="about.php" class="mob-item">About</a>
+  <a href="service.php" class="mob-item">Service</a>
+  <a href="package.php" class="mob-item">Package</a>
+  <a href="gallery.php" class="mob-item">Gallery</a>
+  <a href="blog.php" class="mob-item">Blog</a>
+  <a href="contact.php" class="mob-item">Contact</a>
 </div>
 
 
@@ -1314,24 +1313,24 @@ function toggleContact() {
             <div class="col-lg-2 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
                     
-                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
                     
-                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="gallery.php"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.php"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
-                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="blog.php"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
-                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
-                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
-                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
                     
                 </div>
             </div>
@@ -1392,7 +1391,7 @@ function toggleContact() {
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.php" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">

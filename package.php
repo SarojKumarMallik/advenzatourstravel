@@ -1,12 +1,10 @@
+<?php require_once 'config/db.php';
+require_once 'includes/track_view.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>TRAVELER - Free Travel Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <?php include 'includes/seo_tags.php'; ?>
 
     <!-- Favicon -->
      <link href="img/logo.ico" rel="icon">
@@ -23,7 +21,7 @@
 </head>
 
 <body>
-     <style>
+    <style>
 
 /* ================= ROOT ================= */
 :root {
@@ -294,13 +292,13 @@ a{
     </div>
 
     <nav class="nav-menu">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="about.html" class="nav-item">About</a>
-       <a href="service.html" class="nav-item">Service</a>
-      <a href="package.html" class="nav-item">Package</a>
-      <a href="gallery.html" class="nav-item">Gallery</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="index.php" class="nav-item">Home</a>
+      <a href="about.php" class="nav-item">About</a>
+       <a href="service.php" class="nav-item">Service</a>
+      <a href="package.php" class="nav-item">Package</a>
+      <a href="gallery.php" class="nav-item">Gallery</a>
+      <a href="blog.php" class="nav-item">Blog</a>
+      <a href="contact.php" class="nav-item">Contact</a>
     </nav>
 
     <div class="nav-right">
@@ -320,13 +318,13 @@ a{
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobileMenu">
-  <a href="index.html" class="mob-item">Home</a>
-  <a href="about.html" class="mob-item">About</a>
-  <a href="service.html" class="mob-item">Service</a>
-  <a href="package.html" class="mob-item">Package</a>
-  <a href="gallery.html" class="mob-item">Gallery</a>
-  <a href="blog.html" class="mob-item">Blog</a>
-  <a href="contact.html" class="mob-item">Contact</a>
+  <a href="index.php" class="mob-item">Home</a>
+  <a href="about.php" class="mob-item">About</a>
+  <a href="service.php" class="mob-item">Service</a>
+  <a href="package.php" class="mob-item">Package</a>
+  <a href="gallery.php" class="mob-item">Gallery</a>
+  <a href="blog.php" class="mob-item">Blog</a>
+  <a href="contact.php" class="mob-item">Contact</a>
 </div>
 
 
@@ -337,63 +335,7 @@ function toggleMenu(){
 }
 </script>
 
-    <!-- Header Start -->
-    <div class="container-fluid page-header">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Contact</h3>
-                <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Contact</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-
-
-    
-
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px; color: #F4A621 !important; ">Contact</h6>
-                <h1>Contact For Any Query</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="bg-white" style="padding: 30px;">
-                        <h5 class="text-center mb-4">Receive messages instantly with our PHP and Ajax contact form - available in the <a href="https://htmlcodex.com/downloading/?item=1518">Pro Version</a> only.</h5>
-                        <form>
-                            <div class="form-row">
-                                <div class="col-sm-6 mb-3">
-                                    <input type="text" class="form-control p-4" placeholder="Your Name" />
-                                </div>
-                                <div class="col-sm-6 mb-3">
-                                    <input type="email" class="form-control p-4" placeholder="Your Email" />
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control p-4" placeholder="Subject" />
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control py-3 px-4" rows="5" placeholder="Message"></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn py-3 px-4" type="submit" style="background-color: #F4A621; color: white;">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-    <!-- FLOATING CONTACT START -->
+ <!-- FLOATING CONTACT START -->
 <div class="floating-container">
   <div class="floating-stack">
 
@@ -544,7 +486,155 @@ function toggleContact() {
 </script>
 
 
-    <!-- Footer Start -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-white text-uppercase">Package</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Package</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+  
+
+<style>
+/* ===== SECTION ===== */
+.package-sec{
+    background:#f5f5f5;
+    padding:60px 20px;
+}
+
+/* ===== GRID (2 PER ROW) ===== */
+.package-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:30px;
+}
+
+/* ===== CARD ===== */
+.package-card{
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    text-align:center;
+}
+
+.package-card:hover{
+    transform:translateY(-6px);
+}
+
+/* IMAGE */
+.package-img{
+    width:100%;
+    height:350px;
+    
+}
+
+/* TEXT */
+.package-content{
+    padding:15px;
+}
+
+.package-title{
+    font-size:15px;
+    font-weight:600;
+    color:#333;
+}
+
+.package-title span{
+    color:#F4A621;
+}
+
+/* BUTTON */
+.package-btn{
+    display:inline-block;
+    margin:15px 0 18px;
+    padding:10px 24px;
+    background:#F4A621;
+    color:#fff;
+    font-size:12px;
+    text-decoration:none;
+    border-radius:3px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.package-btn:hover{
+    background:#d98f1c;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .package-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+<section class="package-sec">
+
+    <div class="package-grid">
+
+        <!-- CARD 1 -->
+        <div class="package-card">
+            <img src="img/travel-agnecy-in-bhubaneswar.webp" class="package-img">
+            <div class="package-content">
+                <div class="package-title">Puri-Konark <span>Tour Package</span></div>
+                <a href="puri-konark-tour-package.php" class="package-btn">LEARN MORE</a>
+            </div>
+        </div>
+
+ <!-- CARD 4 -->
+        <div class="package-card">
+            <img src="img/gallery/nature.webp" class="package-img">
+            <div class="package-content">
+                <div class="package-title">Koraput <span>Tour Package</span></div>
+                <a href="koraput-tour-package.php" class="package-btn">LEARN MORE</a>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="package-card">
+            <img src="img/gallery/Sambalpur/hirakud.webp" class="package-img">
+            <div class="package-content">
+                <div class="package-title">Sambalpur-Bolangir <span>Tour Package</span></div>
+                <a href="sambalpur-bolangir-tour-package.php" class="package-btn">LEARN MORE</a>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="package-card">
+            <img src="img/gallery/daringbadi/daringbadi.webp" class="package-img">
+            <div class="package-content">
+                <div class="package-title">Daringbadi <span>Tour Package</span></div>
+                <a href="daringibadi-tour-package.php" class="package-btn">LEARN MORE</a>
+            </div>
+        </div>
+
+       
+
+    </div>
+
+</section>
+ 
+
+
+
+
+   <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
@@ -579,23 +669,23 @@ function toggleContact() {
             <div class="col-lg-2 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
                     
-                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.php"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.php"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
-                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="blog.php"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
-                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
-                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
-                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
                     
                 </div>
             </div>
@@ -656,7 +746,7 @@ function toggleContact() {
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.php" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
@@ -671,7 +761,7 @@ function toggleContact() {
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #F4A621; color: white;"><i class="fa fa-angle-double-up"></i></a>
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #F4A621; color: #fff;"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

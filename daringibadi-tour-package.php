@@ -1,12 +1,10 @@
+<?php require_once 'config/db.php';
+require_once 'includes/track_view.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>TRAVELER - Free Travel Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+  <?php include 'includes/seo_tags.php'; ?>
 
     <!-- Favicon -->
      <link href="img/logo.ico" rel="icon">
@@ -294,13 +292,13 @@ a{
     </div>
 
     <nav class="nav-menu">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="about.html" class="nav-item">About</a>
-       <a href="service.html" class="nav-item">Service</a>
-      <a href="package.html" class="nav-item">Package</a>
-      <a href="gallery.html" class="nav-item">Gallery</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="index.php" class="nav-item">Home</a>
+      <a href="about.php" class="nav-item">About</a>
+       <a href="service.php" class="nav-item">Service</a>
+      <a href="package.php" class="nav-item">Package</a>
+      <a href="gallery.php" class="nav-item">Gallery</a>
+      <a href="blog.php" class="nav-item">Blog</a>
+      <a href="contact.php" class="nav-item">Contact</a>
     </nav>
 
     <div class="nav-right">
@@ -320,13 +318,13 @@ a{
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobileMenu">
-  <a href="index.html" class="mob-item">Home</a>
-  <a href="about.html" class="mob-item">About</a>
-  <a href="service.html" class="mob-item">Service</a>
-  <a href="package.html" class="mob-item">Package</a>
-  <a href="gallery.html" class="mob-item">Gallery</a>
-  <a href="blog.html" class="mob-item">Blog</a>
-  <a href="contact.html" class="mob-item">Contact</a>
+  <a href="index.php" class="mob-item">Home</a>
+  <a href="about.php" class="mob-item">About</a>
+  <a href="service.php" class="mob-item">Service</a>
+  <a href="package.php" class="mob-item">Package</a>
+  <a href="gallery.php" class="mob-item">Gallery</a>
+  <a href="blog.php" class="mob-item">Blog</a>
+  <a href="contact.php" class="mob-item">Contact</a>
 </div>
 
 
@@ -336,6 +334,7 @@ function toggleMenu(){
   document.getElementById("overlay").classList.toggle("active");
 }
 </script>
+
 
  <!-- FLOATING CONTACT START -->
 <div class="floating-container">
@@ -494,13 +493,13 @@ function toggleContact() {
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Puri Konark Tour Package</h3>
+                <h3 class="display-4 text-white text-uppercase">Daringibadi TOUR PACKAGE</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
                      <p class="m-0 text-uppercase"><a class="text-white" href="">Package</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Puri Konark Tour Package</p>
+                    <p class="m-0 text-uppercase">Daringibadi TOUR PACKAGE</p>
                 </div>
             </div>
         </div>
@@ -585,14 +584,11 @@ function toggleContact() {
     <div class="pkg-box">
 
         <!-- TITLE -->
-        <div class="pkg-title">Puri Konark Tour Package</div>
+        <div class="pkg-title">Daringibadi Tour Package</div>
 
         <!-- DESCRIPTION -->
         <div class="pkg-desc">
-            Bhubaneswar – Khandagiri – Udayagiri – Lingaraj Temple – Nandankanan – 
-            Kedaragouri – Mukteswar – Raja Rani Temple – Dhauli – Konark Sun Temple – 
-            Chandrabhaga Beach – Ramchandi Temple – Puri Jagannath Temple – Chilika Lake 
-            (Satapada Dolphin Point & Boating) – Bhubaneswar
+            Bhubaneswar – Satkosia – Phulbani – Putudi Waterfall – Mandasaru – Emu Bird Zoo – Daringbadi – Pine Jungle – Daringbadi Waterfall – Bhubaneswar
         </div>
 
         <!-- DURATION -->
@@ -603,11 +599,8 @@ function toggleContact() {
 
         <!-- VEHICLE -->
         <div class="pkg-info">
-            <strong>Vehicle Provide:</strong>
-            <ul class="pkg-list">
-                <li><strong>Innova Crysta</strong> – for 6 Persons</li>
-                <li><strong>Traveller</strong> – Minimum 12 or Maximum 26 Persons</li>
-            </ul>
+            
+           <p><strong>Vehicle Provide:</strong> Best Time to Visit Daringbadi: October to March (Cool and pleasant winter season, ideal for sightseeing and nature exploration. Monsoon season from July to September is also beautiful with lush greenery and waterfalls.)</p>
         </div>
 
     </div>
@@ -754,41 +747,16 @@ function toggleContact() {
         <div class="pkg-overview-content">
 
             <div class="pkg-overview-title">
-                Bhubaneswar – Puri – <span>Konark Tour Overview</span>
+                <span>Daringibadi Tour Overview</span>
             </div>
 
             <div class="pkg-overview-text">
 
-                <p>
-                    This Puri Tour Package with Konark takes you through the cultural, spiritual, 
-                    and natural treasures of Odisha’s famous Golden Triangle. The journey begins in 
-                    Bhubaneswar, known as the City of Temples, where ancient caves, remarkable architecture, 
-                    and sacred shrines reflect the region’s deep-rooted heritage. Explore the historic 
-                    Khandagiri and Udayagiri Caves, the magnificent Lingaraj Temple, and other iconic landmarks 
-                    before heading towards Odisha’s scenic coastline.
-                </p>
+                <p>This tour takes you through the natural, cultural, and serene highlights of Odisha’s hill stations and forests, blending wildlife experiences, cascading waterfalls, and the calm charm of “Kashmir of Odisha” – Daringbadi. From the adventurous stop at Satkosia Tiger Reserve en route to Phulbani, the journey continues towards scenic landscapes and tribal culture. The beauty of Putudi Waterfall, Mandasaru Valley, and the unique Emu Bird Zoo add a touch of diversity to the trip. Finally, Daringbadi welcomes you with its cool climate, pine jungles, coffee gardens, and tranquil waterfalls before returning to Bhubaneswar.</p>
 
-                <p>
-                    The second day of this Konark Tour Package leads you to Dhauli’s Peace Pagoda, 
-                    a symbol of peace and transformation. From there, visit the world-renowned 
-                    Konark Sun Temple, a UNESCO World Heritage Site, celebrated for its stunning stone carvings 
-                    and architectural brilliance. The journey continues to the peaceful 
-                    Chandrabhaga Beach, followed by a spiritual visit to Ramchandi Temple and the revered 
-                    Puri Jagannath Temple, one of the most important Char Dham pilgrimage sites in India.
-                </p>
+                
 
-                <p>
-                    On the final day, experience the natural beauty of Chilika Lake at Satapada, 
-                    where a relaxing boat ride and dolphin spotting offer a refreshing escape into nature. 
-                    The tour concludes with a comfortable return to Bhubaneswar, completing a memorable journey 
-                    through Odisha’s spiritual, cultural, and scenic landscapes.
-                </p>
-
-                <p>
-                    This Puri Konark Tour Package is thoughtfully designed for travelers seeking a perfect blend 
-                    of spiritual devotion, heritage exploration, and natural beauty, making it ideal for families, 
-                    pilgrims, and cultural enthusiasts.
-                </p>
+               <p>Daringbadi is a land of pristine beauty—green valleys alongside rolling pine forests, misty hills dotted with spice and coffee plantations, and streams and waterfalls that shine brightest during monsoon and winter. It is an ideal destination for nature lovers, families, and photographers seeking peaceful escapes.</p>
 
             </div>
 
@@ -797,7 +765,7 @@ function toggleContact() {
         <!-- RIGHT IMAGE -->
         <div class="pkg-overview-img">
             <img src="img/about.webp" alt="Puri Temple">
-            <div class="pkg-badge">Golden Triangle Tour</div>
+            <div class="pkg-badge">Kashmir of Odisha</div>
         </div>
 
     </div>
@@ -945,83 +913,75 @@ function toggleContact() {
             <div class="pkg-title">Tour Highlights</div>
 
             <ul class="pkg-list">
-                <li><strong>Bhubaneswar</strong> – Ancient caves and temples including Khandagiri, Udayagiri, Lingaraj, Mukteswar, Raja Rani, and Kedaragouri</li>
-                <li><strong>Nandankanan Zoo</strong> – Renowned for white tigers and rich botanical surroundings</li>
-                <li><strong>Dhauli</strong> – Peace Pagoda symbolizing Emperor Ashoka’s transformation</li>
-                <li><strong>Konark Sun Temple</strong> – UNESCO World Heritage Site</li>
-                <li><strong>Chandrabhaga Beach</strong> – Scenic and serene coastline</li>
-                <li><strong>Ramchandi Temple</strong> – Spiritual stop near the sea</li>
-                <li><strong>Puri Jagannath Temple</strong> – One of India’s sacred Char Dham pilgrimage sites</li>
-                <li><strong>Chilika Lake (Satapada)</strong> – Boating and dolphin-spotting experience</li>
-            </ul>
+    <li><strong>Satkosia</strong> – Tiger Reserve, river views, forest landscape.</li>
+    <li><strong>Phulbani</strong> – Scenic town, gateway to waterfalls and valleys.</li>
+    <li><strong>Putudi Waterfall</strong> – Picturesque cascade amidst greenery.</li>
+    <li><strong>Mandasaru Valley</strong> – Known as the “Silent Valley of Odisha,” rich in biodiversity.</li>
+    <li><strong>Emu Bird Zoo</strong> – Unique attraction for bird lovers.</li>
+    <li><strong>Daringbadi</strong> – Pine jungle, coffee plantations, waterfalls, and cool climate.</li>
+</ul>
 
         </div>
 
-        <!-- RIGHT: FAQ -->
+      <!-- RIGHT FAQ -->
         <div class="pkg-box">
 
             <div class="faq-title">
-                Why Choose This Puri Konark Tour Package?
+                Why Choose This Satkosia – Daringbadi Nature Tour?
             </div>
 
             <!-- ITEM 1 -->
             <div class="faq-item active">
                 <div class="faq-question">
-                    Carefully Planned Golden Triangle Route
+                    Nature & Wildlife Experience
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    This Puri Tour Package with Konark is thoughtfully designed to cover Odisha’s most important spiritual, cultural, and natural attractions in a smooth and well-paced journey.
+                    Explore Satkosia Tiger Reserve, dense forests, river views, and rich biodiversity, making it perfect for nature and wildlife lovers.
                 </div>
             </div>
 
             <!-- ITEM 2 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Perfect Balance of Spirituality & Sightseeing
+                    Scenic Waterfalls & Valleys
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    This Konark Tour Package blends temple visits, historical monuments, and scenic natural spots including Puri Jagannath Temple, Konark Sun Temple, and Chilika Lake.
+                    Visit beautiful spots like Putudi Waterfall and Mandasaru Valley, known as the Silent Valley of Odisha, offering breathtaking landscapes.
                 </div>
             </div>
 
             <!-- ITEM 3 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Comfortable Travel & Local Expertise
+                    Unique Hill Station Experience
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Enjoy comfortable transport and experienced local drivers ensuring smooth travel and the best experience throughout your journey.
+                    Daringbadi, known as the Kashmir of Odisha, offers pine forests, coffee plantations, waterfalls, and a pleasant cool climate.
                 </div>
             </div>
 
-            <!-- ITEM 4 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    Ideal for Families, Pilgrims & Cultural Travelers
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Suitable for families, senior citizens, and pilgrims with a balanced itinerary including temple visits and relaxation time.
-                </div>
-            </div>
+            
 
             <!-- ITEM 5 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Transparent Pricing & Personalized Support
+                    Ideal for Nature Lovers & Explorers
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Clear pricing and full support from planning to execution for a smooth and memorable travel experience.
+                    This package is perfect for travelers seeking nature, photography, relaxation, and unique offbeat experiences.
                 </div>
             </div>
 
         </div>
 
     </div>
+
+
+    
 
 </section>
 
@@ -1191,68 +1151,57 @@ document.querySelectorAll(".faq-question").forEach(item => {
     <div class="pkg-detail-wrap">
 
         <!-- TITLE -->
-        <div class="pkg-detail-title">Puri-Konark Tour Details</div>
-
-        <!-- INTRO -->
-        <div class="pkg-detail-text">
-
-            <p>
-                Advenza Tours and Travel offering Puri Tour Package with Konark takes you through the cultural, spiritual, and natural highlights of Odisha’s famous Golden Triangle. Starting from Bhubaneswar, the city of temples, the journey introduces you to ancient caves, timeless architecture, and sacred shrines that reflect Odisha’s rich heritage.
-            </p>
-
-            <p>
-                Your tour begins with visits to the historic Khandagiri and Udayagiri Caves, followed by iconic temples such as Lingaraj Temple, Mukteswar Temple, Raja Rani Temple, and Kedaragouri. The journey then moves towards the scenic coastal belt, offering a perfect balance of spirituality and history.
-            </p>
-
-        </div>
+        <div class="pkg-detail-title">Daringibadi Tour Details</div>
 
         <!-- TIMELINE -->
         <div class="pkg-timeline">
 
-            <!-- DAY 2 -->
+            <!-- DAY 1 -->
             <div class="pkg-item left">
                 <div class="pkg-card">
-                    <div class="pkg-day-title">Day 2 – Dhauli, Konark & Puri Spiritual Journey</div>
+                    <div class="pkg-day-title">Day 01: Bhubaneswar – Phulbani</div>
                     <p>
-                        The second day of this Konark Tour Package starts with a visit to Dhauli’s Peace Pagoda, a symbol of Emperor Ashoka’s transformation and message of peace.
+                        Pickup from Bhubaneswar at 07:00 AM and drive towards Phulbani (approx. 290 km).
+                        En route, enjoy a visit to Satkosia Tiger Reserve, known for its wildlife and scenic river landscapes.
                     </p>
                     <p>
-                        From there, you explore the world-famous Konark Sun Temple, a UNESCO World Heritage Site known for its magnificent stone architecture and rich cultural significance.
+                        Upon arrival in Phulbani, check-in at your hotel and relax. Evening free at leisure.
                     </p>
+                    <p><strong>Overnight in Phulbani</strong></p>
+                    <p><strong>Meals:</strong> None</p>
                 </div>
             </div>
 
-            <!-- DAY 2 CONTINUE -->
+            <!-- DAY 2 -->
             <div class="pkg-item right">
                 <div class="pkg-card">
+                    <div class="pkg-day-title">Day 02: Phulbani – Daringbadi</div>
                     <p>
-                        After Konark, relax at the serene Chandrabhaga Beach, followed by a spiritual stop at Ramchandi Temple.
+                        After breakfast, drive to Daringbadi (approx. 190 km). En route, visit Putudi Waterfall,
+                        Mandasaru Valley (Silent Valley of Odisha), and the Emu Bird Zoo.
                     </p>
                     <p>
-                        The day concludes in Puri, where you visit the sacred Puri Jagannath Temple, one of the four Char Dham pilgrimage sites and a major highlight of this Puri Tour Package.
+                        Continue your journey to Daringbadi, popularly known as the Kashmir of Odisha.
+                        On arrival, check-in at your hotel and relax amidst the serene hill station climate.
                     </p>
+                    <p><strong>Overnight in Daringbadi</strong></p>
+                    <p><strong>Meals:</strong> Breakfast</p>
                 </div>
             </div>
 
             <!-- DAY 3 -->
             <div class="pkg-item left">
                 <div class="pkg-card">
-                    <div class="pkg-day-title">Day 3 – Chilika Lake & Return to Bhubaneswar</div>
+                    <div class="pkg-day-title">Day 03: Daringbadi Exploration – Bhubaneswar</div>
                     <p>
-                        On the final day, the tour takes you to Chilika Lake at Satapada, Asia’s largest brackish water lagoon.
-                    </p>
-                </div>
-            </div>
-
-            <!-- DAY 3 CONTINUE -->
-            <div class="pkg-item right">
-                <div class="pkg-card">
-                    <p>
-                        Enjoy a peaceful boat ride, witness the natural beauty of the lake, and experience dolphin spotting.
+                        Morning after breakfast, explore Lovers Paradise, followed by visits to the Pine Jungle
+                        and Daringbadi Waterfall.
                     </p>
                     <p>
-                        The tour concludes with a comfortable return to Bhubaneswar, leaving you with unforgettable memories.
+                        Later, check out from the hotel at 10:00 AM and drive back to Bhubaneswar (approx. 370 km).
+                        Upon arrival, transfer to your onward destination.
                     </p>
+                    <p><strong>Meals:</strong> Breakfast & Dinner</p>
                 </div>
             </div>
 
@@ -1303,23 +1252,23 @@ document.querySelectorAll(".faq-question").forEach(item => {
             <div class="col-lg-2 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
                     
-                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.php"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.php"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
-                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="blog.php"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
-                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
-                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
-                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
                     
                 </div>
             </div>
@@ -1380,7 +1329,7 @@ document.querySelectorAll(".faq-question").forEach(item => {
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.php" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">

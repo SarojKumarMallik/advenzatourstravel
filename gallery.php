@@ -1,12 +1,10 @@
+<?php require_once 'config/db.php';
+require_once 'includes/track_view.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>TRAVELER - Free Travel Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <?php include 'includes/seo_tags.php'; ?>
 
     <!-- Favicon -->
      <link href="img/logo.ico" rel="icon">
@@ -23,7 +21,7 @@
 </head>
 
 <body>
-   <style>
+    <style>
 
 /* ================= ROOT ================= */
 :root {
@@ -294,13 +292,13 @@ a{
     </div>
 
     <nav class="nav-menu">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="about.html" class="nav-item">About</a>
-       <a href="service.html" class="nav-item">Service</a>
-      <a href="package.html" class="nav-item">Package</a>
-      <a href="gallery.html" class="nav-item">Gallery</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="index.php" class="nav-item">Home</a>
+      <a href="about.php" class="nav-item">About</a>
+       <a href="service.php" class="nav-item">Service</a>
+      <a href="package.php" class="nav-item">Package</a>
+      <a href="gallery.php" class="nav-item">Gallery</a>
+      <a href="blog.php" class="nav-item">Blog</a>
+      <a href="contact.php" class="nav-item">Contact</a>
     </nav>
 
     <div class="nav-right">
@@ -320,13 +318,13 @@ a{
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobileMenu">
-  <a href="index.html" class="mob-item">Home</a>
-  <a href="about.html" class="mob-item">About</a>
-  <a href="service.html" class="mob-item">Service</a>
-  <a href="package.html" class="mob-item">Package</a>
-  <a href="gallery.html" class="mob-item">Gallery</a>
-  <a href="blog.html" class="mob-item">Blog</a>
-  <a href="contact.html" class="mob-item">Contact</a>
+  <a href="index.php" class="mob-item">Home</a>
+  <a href="about.php" class="mob-item">About</a>
+  <a href="service.php" class="mob-item">Service</a>
+  <a href="package.php" class="mob-item">Package</a>
+  <a href="gallery.php" class="mob-item">Gallery</a>
+  <a href="blog.php" class="mob-item">Blog</a>
+  <a href="contact.php" class="mob-item">Contact</a>
 </div>
 
 
@@ -336,7 +334,6 @@ function toggleMenu(){
   document.getElementById("overlay").classList.toggle("active");
 }
 </script>
-
 
  <!-- FLOATING CONTACT START -->
 <div class="floating-container">
@@ -490,15 +487,17 @@ function toggleContact() {
 
 
 
+
     <!-- Header Start -->
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Blog</h3>
+                <h3 class="display-4 text-white text-uppercase">Gallery</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Blog</p>
+                     <p class="m-0 text-uppercase"><a class="text-white" href="">Gallery</a></p>
+                   
                 </div>
             </div>
         </div>
@@ -506,138 +505,310 @@ function toggleContact() {
     <!-- Header End -->
 
 
-   
 
 
-    <!-- Blog Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-uppercase" style="letter-spacing: 5px; color: #F4A621;">Our Blog</h6>
-                <h1>Latest From Our Blog</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-1.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-2.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-3.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-1.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-2.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-3.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Blog End -->
 
 
-    <!-- Footer Start -->
+
+<style>
+
+/* ===== SECTION ===== */
+.lr-gallery-sec{
+    padding:80px 20px;
+}
+
+/* ===== WRAPPER ===== */
+.lr-gallery-wrap{
+    max-width:1300px;
+    margin:auto;
+}
+
+/* ===== TOP TABS ===== */
+.lr-tabs{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+/* TAB BUTTON */
+.lr-tab-btn{
+    padding:10px 18px;
+    border:none;
+    background:#f3f3f3;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+/* ACTIVE */
+.lr-tab-btn.active{
+    background:#F4A621;
+    color:#fff;
+    box-shadow:0 6px 15px rgba(244,166,33,0.4);
+}
+
+/* ===== GRID ===== */
+.lr-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* CARD */
+.lr-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:14px;
+    display:none;
+    transform:scale(0.9);
+    opacity:0;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.lr-card.show{
+    display:block;
+    transform:scale(1);
+    opacity:1;
+}
+
+/* IMAGE */
+.lr-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.lr-card:hover img{
+    transform:scale(1.1);
+}
+
+/* ===== LOCATION TEXT ===== */
+.lr-card span{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    padding:5px 10px;
+    font-size:13px;
+    border-radius:6px;
+}
+
+/* ===== MODAL ===== */
+.lr-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.95);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.lr-modal img{
+    max-width:100%;
+    max-height:80vh;
+    border-radius:10px;
+}
+
+/* CLOSE */
+.lr-close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* NAV BUTTONS */
+.lr-prev, .lr-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:35px;
+    color:#fff;
+    cursor:pointer;
+    padding:10px;
+}
+
+.lr-prev{ left:10px; }
+.lr-next{ right:10px; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .lr-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .lr-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+
+
+<section class="lr-gallery-sec">
+<div class="lr-gallery-wrap">
+
+<!-- TOP TABS -->
+<div class="lr-tabs">
+    <button class="lr-tab-btn active" onclick="filterLR('all',this)">All</button>
+    <button class="lr-tab-btn" onclick="filterLR('puri',this)">Puri-Konark</button>
+    <button class="lr-tab-btn" onclick="filterLR('koraput',this)">Koraput</button>
+    <button class="lr-tab-btn" onclick="filterLR('daringbadi',this)">Daringbadi</button>
+    <button class="lr-tab-btn" onclick="filterLR('sambalpur',this)">Sambalpur</button>
+    <button class="lr-tab-btn" onclick="filterLR('chilika',this)">Chilika</button>
+</div>
+
+<!-- GRID -->
+<div class="lr-grid">
+
+<!-- PURI -->
+<div class="lr-card puri show"><img src="img/gallery/temple.webp"><span>Puri Temple</span></div>
+<div class="lr-card puri show"><img src="img/gallery/beach.webp"><span>Puri Beach</span></div>
+<div class="lr-card puri show"><img src="img/gallery/beach2.webp"><span>Puri Beach</span></div>
+<div class="lr-card puri show"><img src="img/gallery/konark_temple.webp"><span>Konark Temple</span></div>
+
+<!-- KORAPUT -->
+<div class="lr-card koraput show"><img src="img/gallery/nature.webp"><span>Koraput</span></div>
+
+<div class="lr-card koraput show"><img src="img/gallery/koraput.webp"><span>Koraput</span></div>
+<div class="lr-card koraput show"><img src="img/gallery/view.webp"><span>Koraput View</span></div>
+<div class="lr-card koraput show"><img src="img/gallery/koraput_travel.webp"><span>Koraput Trekking</span></div>
+<div class="lr-card koraput show"><img src="img/gallery/koraput_nature2.webp"><span>Duduma Waterfall</span></div>
+
+
+<div class="lr-card koraput show"><img src="img/gallery/koraput/Gupteswartemple.webp"><span>Gupteswar Temple</span></div>
+<div class="lr-card koraput show"><img src="img/gallery/koraput/sabarsrikestra.webp"><span>Sabara Srikhetra </span></div>
+<div class="lr-card koraput show"><img src="img/gallery/koraput/RaniDudumaWaterfall.webp"><span>RaniDuduma Waterfall</span></div>
+<div class="lr-card koraput show"><img src="img/gallery/koraput1.webp"><span>Koraput</span></div>
+<div class="lr-card koraput show"><img src="img/gallery/koraput (1).webp"><span>Koraput View</span></div>
+<div class="lr-card koraput show"><img src="img/gallery/koraput/gopalpurbeach.webp"><span>Gopalpur Beach </span></div>
+<div class="lr-card koraput show"><img src="img/gallery/koraput/taptapani.webp"><span>Taptapani</span></div>
+
+<!-- DARINGBADI -->
+<div class="lr-card daringbadi show"><img src="img/gallery/Daringbadi9.webp"><span>Daringbadi</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/Eco-Retreat-Daringbadi-20-scaled.webp"><span>Eco Retreat</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/daringbadi/hill.webp"><span>Daringbadi Hills</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/daringbadi/hillviewpark.webp"><span>Daringbadi Hill Park</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/daringbadi/cofeegarden.webp"><span>Daringbadi Coffe Garden</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/daringbadi/putudiwaterfall.webp"><span>Putudi Waterfall</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/daringbadi/daringbadi.webp"><span>Daringbadi</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/daringbadi/mandasuru1.webp"><span>Mandasaru - Te Silent Valley of Odisha</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/daringbadi/pineforest.webp"><span>Daringbadi Pine Forest</span></div>
+
+<div class="lr-card daringbadi show"><img src="img/gallery/daringbadi/ghati.webp"><span>Kalinga Ghati</span></div>
+
+
+
+<div class="lr-card daringbadi show"><img src="img/gallery/Satkosia/SatkosiaGorge.webp"><span>Satkosia Gorge</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/Satkosia/satkosiatiger.webp"><span>Satkosia Tiger Reserve</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/Satkosia/satkosiagorge hill.webp"><span>Satkosia Gorge</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/Satkosia/satkosiaboating.webp"><span>Satkosia Boating</span></div>
+<div class="lr-card daringbadi show"><img src="img/gallery/Satkosia/satkosiawaterfall.webp"><span>Satkosia Gorge</span></div>
+
+<!-- SAMBALPUR -->
+<div class="lr-card sambalpur show"><img src="img/gallery/Sambalpur/sambalswari-temple.webp"><span>Samaleswari Temple</span></div>
+<div class="lr-card sambalpur show"><img src="img/gallery/Sambalpur/hirakud.webp"><span>Hirakud Dam</span></div>
+<div class="lr-card sambalpur show"><img src="img/gallery/Sambalpur/huma-temple.webp"><span>Huma Temple</span></div>
+
+<div class="lr-card sambalpur show"><img src="img/gallery/Sambalpur/harisankar.webp"><span>Harishankar Temple</span></div>
+<div class="lr-card sambalpur show"><img src="img/gallery/Sambalpur/nrusinghnath.webp"><span>Nrusinghnath Temple</span></div>
+<div class="lr-card sambalpur show"><img src="img/gallery/Sambalpur/Saptasajya.webp"><span>Saptasajya</span></div>
+
+
+<!-- CHILIKA -->
+<div class="lr-card chilika show"><img src="img/gallery/Chilika/kalijai.webp"><span>Kalijai Temple</span></div>
+<div class="lr-card chilika show"><img src="img/gallery/Chilika/chilika_boat.webp"><span>Chilika Lake</span></div>
+<div class="lr-card chilika show"><img src="img/gallery/Chilika/chilika_bird.webp"><span>Chilika Lake</span></div>
+<div class="lr-card chilika show"><img src="img/gallery/Chilika/chilika_bird (2).webp"><span>Chilika Lake</span></div>
+
+</div>
+</div>
+</section>
+
+
+<!-- MODAL (UNCHANGED) -->
+<div class="lr-modal" id="lrModal">
+<span class="lr-close" onclick="closeModal()">&times;</span>
+<span class="lr-prev" onclick="changeSlide(-1)">&#10094;</span>
+<img id="lrModalImg">
+<span class="lr-next" onclick="changeSlide(1)">&#10095;</span>
+</div>
+
+
+<script>
+
+/* SAME JS - NO CHANGE */
+
+let currentIndex = 0;
+let currentImages = [];
+
+document.querySelectorAll(".lr-card img").forEach((img)=>{
+    img.addEventListener("click", ()=>{
+        setImagesForCurrentView();
+        currentIndex = currentImages.indexOf(img.src);
+        openModal();
+    });
+});
+
+function setImagesForCurrentView(){
+    currentImages = [];
+    document.querySelectorAll(".lr-card.show img").forEach(img=>{
+        currentImages.push(img.src);
+    });
+}
+
+function openModal(){
+    document.getElementById("lrModal").style.display="flex";
+    document.getElementById("lrModalImg").src = currentImages[currentIndex];
+}
+
+function closeModal(){
+    document.getElementById("lrModal").style.display="none";
+}
+
+function changeSlide(step){
+    currentIndex += step;
+
+    if(currentIndex < 0) currentIndex = currentImages.length-1;
+    if(currentIndex >= currentImages.length) currentIndex = 0;
+
+    document.getElementById("lrModalImg").src = currentImages[currentIndex];
+}
+
+function filterLR(category, btn){
+    let cards=document.getElementsByClassName("lr-card");
+    let buttons=document.getElementsByClassName("lr-tab-btn");
+
+    for(let b of buttons){b.classList.remove("active");}
+    btn.classList.add("active");
+
+    for(let card of cards){
+        card.classList.remove("show");
+        if(category==="all" || card.classList.contains(category)){
+            setTimeout(()=>card.classList.add("show"),100);
+        }
+    }
+}
+
+</script>
+
+
+
+
+
+ <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
@@ -672,23 +843,23 @@ function toggleContact() {
             <div class="col-lg-2 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
                     
-                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.php"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.php"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
-                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="blog.php"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
-                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
-                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
-                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
                     
                 </div>
             </div>
@@ -749,7 +920,7 @@ function toggleContact() {
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.php" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
@@ -764,7 +935,7 @@ function toggleContact() {
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #F4A621; color: white;"><i class="fa fa-angle-double-up"></i></a>
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #F4A621; color: #fff;"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

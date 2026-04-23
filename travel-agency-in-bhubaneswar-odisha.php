@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <style>
+   <style>
 
 /* ================= ROOT ================= */
 :root {
@@ -294,13 +294,13 @@ a{
     </div>
 
     <nav class="nav-menu">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="about.html" class="nav-item">About</a>
-       <a href="service.html" class="nav-item">Service</a>
-      <a href="package.html" class="nav-item">Package</a>
-      <a href="gallery.html" class="nav-item">Gallery</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="index.php" class="nav-item">Home</a>
+      <a href="about.php" class="nav-item">About</a>
+       <a href="service.php" class="nav-item">Service</a>
+      <a href="package.php" class="nav-item">Package</a>
+      <a href="gallery.php" class="nav-item">Gallery</a>
+      <a href="blog.php" class="nav-item">Blog</a>
+      <a href="contact.php" class="nav-item">Contact</a>
     </nav>
 
     <div class="nav-right">
@@ -320,13 +320,13 @@ a{
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobileMenu">
-  <a href="index.html" class="mob-item">Home</a>
-  <a href="about.html" class="mob-item">About</a>
-  <a href="service.html" class="mob-item">Service</a>
-  <a href="package.html" class="mob-item">Package</a>
-  <a href="gallery.html" class="mob-item">Gallery</a>
-  <a href="blog.html" class="mob-item">Blog</a>
-  <a href="contact.html" class="mob-item">Contact</a>
+  <a href="index.php" class="mob-item">Home</a>
+  <a href="about.php" class="mob-item">About</a>
+  <a href="service.php" class="mob-item">Service</a>
+  <a href="package.php" class="mob-item">Package</a>
+  <a href="gallery.php" class="mob-item">Gallery</a>
+  <a href="blog.php" class="mob-item">Blog</a>
+  <a href="contact.php" class="mob-item">Contact</a>
 </div>
 
 
@@ -336,6 +336,7 @@ function toggleMenu(){
   document.getElementById("overlay").classList.toggle("active");
 }
 </script>
+
 
  <!-- FLOATING CONTACT START -->
 <div class="floating-container">
@@ -489,16 +490,17 @@ function toggleContact() {
 
 
 
-
     <!-- Header Start -->
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Package</h3>
+                <h3 class="display-4 text-white text-uppercase">Best Travel Agency in Bhubaneswar</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Package</p>
+                    <p class="m-0 text-uppercase">Blog</p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Best Travel Agency in Bhubaneswar</p>
                 </div>
             </div>
         </div>
@@ -506,137 +508,270 @@ function toggleContact() {
     <!-- Header End -->
 
 
-  
-
-<style>
-/* ===== SECTION ===== */
-.package-sec{
-    background:#f5f5f5;
-    padding:60px 20px;
-}
-
-/* ===== GRID (2 PER ROW) ===== */
-.package-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap:30px;
-}
-
-/* ===== CARD ===== */
-.package-card{
-    background:#fff;
-    border-radius:8px;
-    overflow:hidden;
-    box-shadow:0 6px 20px rgba(0,0,0,0.08);
-    transition:0.3s;
-    text-align:center;
-}
-
-.package-card:hover{
-    transform:translateY(-6px);
-}
-
-/* IMAGE */
-.package-img{
-    width:100%;
-    height:350px;
+   <!-- BLOG SECTION START -->
+<section class="advx-blog-sec">
     
-}
+    <div class="advx-blog-container">
 
-/* TEXT */
-.package-content{
-    padding:15px;
-}
+        <h1 class="advx-blog-title">
+            Best Travel Agency in Bhubaneswar – Advenza Tours & Travel
+        </h1>
 
-.package-title{
-    font-size:15px;
-    font-weight:600;
-    color:#333;
-}
-
-.package-title span{
-    color:#F4A621;
-}
-
-/* BUTTON */
-.package-btn{
-    display:inline-block;
-    margin:15px 0 18px;
-    padding:10px 24px;
-    background:#F4A621;
-    color:#fff;
-    font-size:12px;
-    text-decoration:none;
-    border-radius:3px;
-    letter-spacing:1px;
-    transition:0.3s;
-}
-
-.package-btn:hover{
-    background:#d98f1c;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-    .package-grid{
-        grid-template-columns:1fr;
-    }
-}
-</style>
-
-<section class="package-sec">
-
-    <div class="package-grid">
-
-        <!-- CARD 1 -->
-        <div class="package-card">
-            <img src="img/travel-agnecy-in-bhubaneswar.webp" class="package-img">
-            <div class="package-content">
-                <div class="package-title">Puri-Konark <span>Tour Package</span></div>
-                <a href="puri-konark-tour-package.html" class="package-btn">LEARN MORE</a>
-            </div>
+        <!-- IMAGE BELOW HEADING -->
+        <div class="advx-blog-img-wrap">
+            <img 
+                src="img/Blog1.png" 
+                alt="Bhubaneswar Travel Destination"
+                class="advx-blog-img">
         </div>
 
- <!-- CARD 4 -->
-        <div class="package-card">
-            <img src="img/gallery/nature.webp" class="package-img">
-            <div class="package-content">
-                <div class="package-title">Koraput <span>Tour Package</span></div>
-                <a href="koraput-tour-package.html" class="package-btn">LEARN MORE</a>
-            </div>
-        </div>
+        <p class="advx-blog-text">
+            If you are planning a trip to Odisha, choosing the best travel agency in Bhubaneswar can make your journey smooth, comfortable, and stress-free. A well-planned trip is not just about visiting destinations, but about enjoying every moment without worrying about travel arrangements.
+        </p>
 
-        <!-- CARD 2 -->
-        <div class="package-card">
-            <img src="img/gallery/Sambalpur/hirakud.webp" class="package-img">
-            <div class="package-content">
-                <div class="package-title">Sambalpur-Bolangir <span>Tour Package</span></div>
-                <a href="sambalpur-bolangir-tour-package.html" class="package-btn">LEARN MORE</a>
-            </div>
-        </div>
+        <p class="advx-blog-text">
+            With Advenza Tours & Travel, you get reliable service, affordable pricing, and complete travel support. From local sightseeing to full tour packages, everything is handled professionally to give you a hassle-free experience.
+        </p>
 
-        <!-- CARD 3 -->
-        <div class="package-card">
-            <img src="img/gallery/daringbadi/daringbadi.webp" class="package-img">
-            <div class="package-content">
-                <div class="package-title">Daringbadi <span>Tour Package</span></div>
-                <a href="daringibadi-tour-package.html" class="package-btn">LEARN MORE</a>
-            </div>
-        </div>
+        <h2 class="advx-blog-heading">
+            Why Bhubaneswar is a Popular Travel Destination
+        </h2>
 
-       
+        <p class="advx-blog-text">
+            Bhubaneswar, known as the Temple City of India, is one of the most important travel destinations in Odisha. The city offers a unique combination of heritage, spirituality, and modern lifestyle, making it suitable for all types of travelers.
+        </p>
+
+        <p class="advx-blog-text">
+            From ancient temples like Lingaraj Temple and Mukteswar Temple to peaceful locations like Dhauli, Bhubaneswar attracts visitors from across the country. The rich culture and historical significance make it a must-visit destination.
+        </p>
+
+        <p class="advx-blog-text">
+            In addition to its local attractions, Bhubaneswar also serves as a gateway to nearby destinations such as 
+            <a href="#">Puri</a>, 
+            <a href="#">Konark</a>, 
+            <a href="#">Chilika Lake</a>, and many other scenic places. This makes it an ideal starting point for exploring Odisha.
+        </p>
+
+        <h2 class="advx-blog-heading">
+            Importance of Choosing the Best Travel Agency in Bhubaneswar
+        </h2>
+
+        <p class="advx-blog-text">
+            Selecting the best travel agency in Bhubaneswar plays a crucial role in your overall travel experience. A professional travel agency helps you plan your journey properly, manage your schedule, and avoid unnecessary complications.
+        </p>
+
+        <p class="advx-blog-text">
+            Instead of handling everything yourself, a trusted travel agency takes care of transportation, bookings, and route planning. This allows you to enjoy your trip without stress and ensures a safe and well-organized journey.
+        </p>
 
     </div>
 
 </section>
- 
+<!-- BLOG SECTION END -->
+
+<style>
+    .advx-blog-sec {
+    width: 100%;
+    background: #ffffff;
+    padding: 50px 15px;
+}
+
+.advx-blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TITLE */
+.advx-blog-title {
+    text-align: left;
+    color: #F4A621;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* IMAGE */
+.advx-blog-img-wrap {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.advx-blog-img {
+    width: 100%;
+   
+    max-height: 450px;
+    border-radius: 8px;
+}
+
+/* HEADINGS */
+.advx-blog-heading {
+    color: #F4A621;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.advx-blog-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* LINKS */
+.advx-blog-sec a {
+    color: #F4A621;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.advx-blog-sec a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .advx-blog-title {
+        font-size: 24px;
+    }
+
+    .advx-blog-heading {
+        font-size: 20px;
+    }
+
+    .advx-blog-text {
+        font-size: 15px;
+    }
+}
+</style>
+
+
+<!-- SERVICES & DETAILS SECTION START -->
+<section class="advx-blog-sec advx-blog-sec-extra">
+
+    <div class="advx-blog-container">
+
+        <h2 class="advx-blog-heading">
+            Our Travel Services in Bhubaneswar
+        </h2>
+
+        <p class="advx-blog-text">
+            At Advenza Tours & Travel, we provide complete travel solutions designed to meet every traveler’s needs. Our services include car rental, taxi services, and customized tour packages across Odisha.
+        </p>
+
+        <p class="advx-blog-text">
+            Our car rental service in Bhubaneswar offers clean and well-maintained vehicles suitable for both local and outstation travel. Our taxi service ensures timely pickup and drop, whether you are traveling to the airport, railway station, or exploring the city.
+        </p>
+
+        <p class="advx-blog-text">
+            We focus on comfort, safety, and reliability so that your journey remains smooth from start to finish.
+        </p>
+
+        <h2 class="advx-blog-heading">
+            Odisha Tour Packages We Offer
+        </h2>
+
+        <p class="advx-blog-text">
+            We specialize in customized tour packages that allow you to explore Odisha in the best possible way. Each package is designed to give you a comfortable and memorable travel experience.
+        </p>
+
+        <p class="advx-blog-text">
+            If you are planning a spiritual and coastal journey, you can explore our 
+            <a href="/puri-konark-tour-package.php">Puri Konark Tour Package</a>, 
+            which covers famous temples and heritage sites.
+        </p>
+
+        <p class="advx-blog-text">
+            For a peaceful hill station experience, the 
+            <a href="/daringbadi-tour-package.php">Daringbadi Tour Package</a> 
+            offers beautiful natural scenery and a refreshing climate.
+        </p>
+
+        <p class="advx-blog-text">
+            For those interested in tribal culture and natural beauty, the 
+            <a href="/koraput-tour-package.php">Koraput Tour Package</a> 
+            provides a unique travel experience.
+        </p>
+
+        <p class="advx-blog-text">
+            Similarly, the 
+            <a href="/sambalpur-tour-package.php">Sambalpur Tour Package</a> 
+            is ideal for exploring cultural heritage, temples, and river landscapes.
+        </p>
+
+        <h2 class="advx-blog-heading">
+            Why Advenza Tours & Travel is the Best Travel Agency in Bhubaneswar
+        </h2>
+
+        <p class="advx-blog-text">
+            Advenza Tours & Travel is trusted by many travelers for its quality service and customer-first approach. Our strong local knowledge helps you explore both popular destinations and hidden gems across Odisha.
+        </p>
+
+        <p class="advx-blog-text">
+            We provide customized travel plans based on your preferences, ensuring that every journey is comfortable and enjoyable. Our pricing is transparent, with no hidden charges, which makes your travel planning easier and more reliable.
+        </p>
+
+        <p class="advx-blog-text">
+            Our dedicated support team is always available to assist you, ensuring that your travel experience remains smooth and stress-free.
+        </p>
+
+        <h2 class="advx-blog-heading">
+            Benefits of Choosing a Professional Travel Agency
+        </h2>
+
+        <p class="advx-blog-text">
+            Traveling with a professional agency offers several advantages that improve your overall experience. It saves your time, ensures proper planning, and provides safe and reliable travel arrangements.
+        </p>
+
+        <p class="advx-blog-text">
+            With organized services and expert guidance, your journey becomes more enjoyable and hassle-free. You also get access to better travel options and well-managed itineraries that enhance your trip.
+        </p>
+
+        <h2 class="advx-blog-heading">
+            Explore Odisha with Comfort and Confidence
+        </h2>
+
+        <p class="advx-blog-text">
+            Odisha is known for its rich culture, beautiful landscapes, temples, beaches, and hill stations. Exploring all these places becomes easier when you have a trusted travel partner by your side.
+        </p>
+
+        <p class="advx-blog-text">
+            With Advenza Tours & Travel, you can explore Odisha with complete comfort and confidence. Whether you are planning a short trip or a full tour, we ensure that your journey is well-organized and memorable.
+        </p>
+
+        <h2 class="advx-blog-heading">
+            Contact the Best Travel Agency in Bhubaneswar
+        </h2>
+
+        <p class="advx-blog-text">
+            If you are looking for the best travel agency in Bhubaneswar, Advenza Tours & Travel is here to help you plan your perfect trip.
+        </p>
+
+        <p class="advx-blog-text">
+            📞 Call / WhatsApp: <a href="tel:+918328806162">+91 8328806162</a><br><br>
+            📧 Email: <a href="mailto:advenzatoours99@gmail.com">advenzatoours99@gmail.com</a>
+           
+        </p>
+
+    </div>
+
+</section>
+<!-- SERVICES & DETAILS SECTION END -->
+
+<style>
+  .advx-blog-sec-extra {
+    padding-top: 10px;
+}
+</style>
 
 
 
+>
 
-   <!-- Footer Start -->
+
+
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
@@ -671,23 +806,23 @@ function toggleContact() {
             <div class="col-lg-2 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
                     
-                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.php"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.php"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
-                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="blog.php"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
-                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
-                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
-                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
                     
                 </div>
             </div>
@@ -748,7 +883,7 @@ function toggleContact() {
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.php" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
@@ -763,7 +898,7 @@ function toggleContact() {
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #F4A621; color: #fff;"><i class="fa fa-angle-double-up"></i></a>
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #F4A621; color: white;"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

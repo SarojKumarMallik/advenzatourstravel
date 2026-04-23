@@ -1,0 +1,68 @@
+
+
+
+#Enable Rewrite Engine
+RewriteEngine On
+
+# Ensure the base directory is correctly set
+RewriteBase /Traveler/
+
+
+# Blog post rewrite rule: /blog/slug -> post.php?slug=slug
+RewriteRule ^blog/([^/]+)/?$ post.php?slug=$1 [L,QSA]
+
+# ==========================
+# Redirect index or index.php to domain root
+# ==========================
+# Redirect index or index.php to domain root of this app
+RewriteCond %{THE_REQUEST} /index(?:\.php)? [NC]
+RewriteRule ^index(?:\.php)?$ / [L,R=301]
+
+# Add a special case for Admin directory
+RewriteRule ^Admin/?$ Admin/Login.php [L]
+
+# ==============================
+# Redirect /Blog/slug to Post.php?slug=slug
+# (Fixing your blog URLs)
+# ==============================
+RewriteRule ^Blog/([^/]+)/?$ Post.php?slug=$1 [L,QSA]
+
+# Redirect /post/Tags.php to /Tags.php
+RewriteRule ^Blog/Tags\.php$ Tags.php [L,R=301]
+
+
+
+
+
+
+
+# ==============================
+# Remove .php and .html extensions
+# ==============================
+
+# IMPORTANT: Exclude Admin directory from URL rewrites
+RewriteCond %{REQUEST_URI} !/Admin/ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.php -f [OR]
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# Redirect URLs with .php to clean URLs (but not for Admin)
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{THE_REQUEST} \s/+([^?]*)\.php[\s?] [NC]
+RewriteCond %{REQUEST_URI} !/Admin/ [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# Remove .html extension (but not for Admin)
+RewriteCond %{REQUEST_URI} !/Admin/ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.html -f [OR]
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Redirect URLs with .html to clean URLs (but not for Admin)
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{THE_REQUEST} \s/+([^?]*)\.html[\s?] [NC]
+RewriteCond %{REQUEST_URI} !/Admin/ [NC]
+RewriteRule ^ /%1 [L,R=301]
+

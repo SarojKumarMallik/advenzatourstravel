@@ -1,15 +1,13 @@
+<?php require_once 'config/db.php';
+require_once 'includes/track_view.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>TRAVELER - Free Travel Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <?php include 'includes/seo_tags.php'; ?>
 
     <!-- Favicon -->
-     <link href="img/logo.ico" rel="icon">
+    <link href="img/logo.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,7 +21,14 @@
 </head>
 
 <body>
-   <style>
+
+
+
+    
+
+
+
+<style>
 
 /* ================= ROOT ================= */
 :root {
@@ -265,9 +270,11 @@ a{
       <div class="topbar-item">
   <i class="fa fa-phone-alt"></i> 
   
-<a href="tel:+918328806162">+91 8328806162</a>
+  <a href="tel:+917609934471">+91 7609934471</a>
   /
   <a href="tel:+917609934471">+91 7609934471</a>
+  
+
 </div>
 
 <div class="topbar-item">
@@ -294,18 +301,18 @@ a{
     </div>
 
     <nav class="nav-menu">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="about.html" class="nav-item">About</a>
-       <a href="service.html" class="nav-item">Service</a>
-      <a href="package.html" class="nav-item">Package</a>
-     
-      <a href="gallery.html" class="nav-item">Gallery</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="index.php" class="nav-item">Home</a>
+      <a href="about.php" class="nav-item">About</a>
+       <a href="service.php" class="nav-item">Service</a>
+      <a href="package.php" class="nav-item">Package</a>
+      <a href="gallery.php" class="nav-item">Gallery</a>
+      <a href="blog.php" class="nav-item">Blog</a>
+      <a href="contact.php" class="nav-item">Contact</a>
     </nav>
 
     <div class="nav-right">
-      <a class="btn-book" href="tel:7609934471">Book Taxi</a>
+      
+ <a class="btn-book" href="tel:7609934471">Book Taxi</a>
       <div class="menu-btn" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
       </div>
@@ -320,14 +327,13 @@ a{
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobileMenu">
-  <a href="index.html" class="mob-item">Home</a>
-  <a href="about.html" class="mob-item">About</a>
-  <a href="service.html" class="mob-item">Service</a>
-  <a href="package.html" class="mob-item">Package</a>
-  
-  <a href="gallery.html" class="mob-item">Gallery</a>
-  <a href="blog.html" class="mob-item">Blog</a>
-  <a href="contact.html" class="mob-item">Contact</a>
+  <a href="index.php" class="mob-item">Home</a>
+  <a href="about.php" class="mob-item">About</a>
+  <a href="service.php" class="mob-item">Service</a>
+  <a href="package.php" class="mob-item">Package</a>
+  <a href="gallery.php" class="mob-item">Gallery</a>
+  <a href="blog.php" class="mob-item">Blog</a>
+  <a href="contact.php" class="mob-item">Contact</a>
 </div>
 
 
@@ -490,27 +496,113 @@ function toggleContact() {
 </script>
 
 
+ 
 
-    <!-- Header Start -->
-    <div class="container-fluid page-header">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">About</h3>
-                <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">About</p>
+
+
+
+
+
+
+   
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.webp" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Explore India with our Package</h4>
+                            <h1 class="display-3 text-white mb-md-4">Discover India – A Celebration of Culture & Festivals</h1>
+                          <style>
+/* Arrow animation */
+.pkg-btn{
+  position: relative;
+  overflow: hidden;
+}
+
+.pkg-btn span{
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.pkg-btn::after{
+  content: "→";
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.pkg-btn:hover span{
+  transform: translateX(-5px);
+}
+
+.pkg-btn:hover::after{
+  opacity: 1;
+  right: 15px;
+}
+</style>
+
+
+<div class="book-now" style="display: flex; justify-content: center; gap: 40px;">
+    
+    <a href="" class="btn py-md-3 px-md-5 mt-2" 
+       style="background-color: #F4A621 !important; color: white;">
+       Contact Us
+    </a>
+
+    <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2 pkg-btn" 
+       style="background: transparent; border: 1px solid #F4A621; color:#fff;">
+       
+       <span>Package</span>
+
+    </a>
+
+</div>
+                        </div>
+                    </div>
                 </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.webp" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Explore India with our Package</h4>
+                            <h1 class="display-3 text-white mb-md-4">Discover India – A Celebration of Culture & Festivals</h1>
+                           <div class="book-now" style="display: flex; justify-content: center; gap: 40px;">
+    
+    <a href="" class="btn py-md-3 px-md-5 mt-2" 
+       style="background-color: #F4A621 !important; color: white;">
+       Contact Us
+    </a>
+
+    <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2 pkg-btn" 
+       style="background: transparent; border: 1px solid #F4A621; color:#fff;">
+       
+       <span>Package</span>
+
+    </a>
+
+</div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
+            
         </div>
     </div>
-    <!-- Header End -->
+    <!-- Carousel End -->
 
 
-    
+   
 
 
-     <!-- About Start -->
+    <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5">
             <div class="row">
@@ -540,6 +632,213 @@ function toggleContact() {
         </div>
     </div>
     <!-- About End -->
+
+    <style>
+/* ===== DESTINATION HEADING ===== */
+.dest-sec{
+    background:#f4f4f4;
+    padding:50px 20px 40px;
+    text-align:center;
+}
+
+.dest-sub{
+    color:#F4A621;
+    letter-spacing:6px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.dest-title{
+    font-size:30px !important;
+    font-weight:600 !important;
+    color:#1a1a1a;
+    margin:0;
+}
+
+/* ===== MAIN SECTION ===== */
+.adv-sec{
+    background:#f0f2f3;
+    padding:0px 20px 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADING */
+.adv-main-title{
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:20px;
+    color:#1a1a1a;
+}
+
+.adv-text{
+    max-width:1200px;
+    margin:0 auto 20px;
+    text-align:left;
+    color:#555;
+    line-height:1.7;
+}
+
+/* GRID */
+.adv-grid{
+    max-width:1200px;
+    margin:50px auto 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+/* CARD */
+.adv-card{
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* SUB HEADING */
+.adv-sub{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:15px;
+    color:#1a1a1a;
+}
+
+/* LIST */
+.adv-list{
+    display:grid;
+    gap:10px;
+    color:#555;
+}
+
+.adv-list div{
+    position:relative;
+    padding-left:22px;
+}
+
+.adv-list div::before{
+    content:"✔";
+    position:absolute;
+    left:0;
+    color:#F4A621;
+    font-weight:bold;
+}
+
+/* HIGHLIGHT BOX */
+.adv-highlight{
+    background:linear-gradient(135deg,#F4A621,#ffb347);
+    color:#000;
+    border-radius:16px;
+    padding:30px;
+}
+
+/* CTA TEXT */
+.adv-highlight p{
+    color:#000;
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+.adv-btn{
+    display:inline-block;
+    background:#000;
+    color:#fff;
+    padding:10px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.adv-btn:hover{
+    background:#333;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+    .adv-grid{
+        grid-template-columns:1fr;
+    }
+    .adv-main-title{
+        font-size:26px;
+    }
+}
+
+@media(max-width:768px){
+    .dest-title{
+        font-size:28px !important;
+    }
+    .dest-sub{
+        letter-spacing:4px;
+        font-size:12px;
+    }
+}
+</style>
+
+
+<!-- DESTINATION HEADING -->
+<section class="dest-sec">
+    <div class="dest-sub">Advenza Tours and Travel</div>
+    <h2 class="dest-title">Your Local Travel Experts in Bhubaneswar, Odisha</h2>
+</section>
+
+
+<!-- YOUR CONTENT (UNCHANGED) -->
+<section class="adv-sec">
+
+    
+
+    <p class="adv-text">
+        At Advenza Tours and Travel, we believe every trip deserves careful planning. 
+        Our team works closely with you to design itineraries that suit your schedule, 
+        budget, and travel preferences. Whether it’s a holiday, family trip, or professional 
+        travel, we ensure everything runs smoothly from start to finish.
+    </p>
+
+    <p class="adv-text">
+        As a dependable travel agency in Bhubaneswar, we also provide reliable car rental 
+        services in Bhubaneswar, making local travel and outstation journeys more convenient 
+        and stress-free.
+    </p>
+
+    <div class="adv-grid">
+
+        <div class="adv-card">
+            <div class="adv-sub">Our Travel & Transportation Services</div>
+
+            <div class="adv-list">
+                <div>Domestic tour packages from Bhubaneswar</div>
+                <div>International holiday planning</div>
+                <div>Family vacations and honeymoon tours</div>
+                <div>Pilgrimage tours including Puri, Konark, and Jagannath Dham</div>
+                <div>Corporate and business travel solutions</div>
+                <div>Car rental services in Bhubaneswar for local & outstation travel</div>
+                <div>Flight tickets, hotel bookings, and transport arrangements</div>
+            </div>
+        </div>
+
+        <div class="adv-highlight">
+            <div class="adv-sub">Travel & Drive with Confidence</div>
+
+            <p>
+                From planning your trip to arranging comfortable transportation, 
+                Advenza Tours and Travel takes care of every detail. Our car rental 
+                services are ideal for airport transfers, city travel, sightseeing, 
+                and long-distance journeys across Odisha.
+            </p>
+
+            <p>
+                If you are searching for the best tours and travel agency in Bhubaneswar, 
+                Odisha, Advenza Tours and Travel is your reliable partner for well-planned 
+                tours and dependable car rental solutions.
+            </p>
+
+            <a href="contact.php" class="adv-btn">Explore Services</a>
+        </div>
+
+    </div>
+
+</section>
 
 
     <!-- Feature Start -->
@@ -584,44 +883,8 @@ function toggleContact() {
     </div>
     <!-- Feature End -->
 
-    <style>
 
-
-.dest-sec{
-    background:#f0f2f3;
-    padding:50px 20px 50px;
-    text-align:center;
-}
-
-.dest-sub{
-    color:#F4A621;
-    letter-spacing:6px;
-    font-size:13px;
-    font-weight:600;
-    margin-bottom:10px;
-}
-
-.dest-title{
-    font-size:30px;
-    font-weight:700;
-    color:#1a1a1a;
-    margin:0;
-}
-
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    .dest-title{
-        font-size:28px;
-    }
-    .dest-sub{
-        letter-spacing:4px;
-        font-size:12px;
-    }
-}
-
-</style>
-
+   
 
 
 <style>
@@ -801,7 +1064,7 @@ function toggleContact() {
                     <div>⚙️ Transmission: Automatic/Manual</div>
                 </div>
                 
-                <a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
+<a href="tel:7609934471" class="car-btn">RESERVE NOW</a>
             </div>
         </div>
 
@@ -1030,192 +1293,394 @@ function toggleContact() {
 
 </section>
 
-
-<!-- HEADING -->
-<section class="dest-sec">
-    <div class="dest-sub">YOUR QUESTIONS ANSWERED</div>
-    <h2 class="dest-title">Frequently Asked Questions</h2>
-</section>
-
-<!-- FAQ SECTION -->
-<section class="sr-faq-sec">
-    <div class="sr-faq-container">
-
-        <div class="sr-faq-item active">
-            <div class="sr-faq-q">
-                <span>What documents are required to rent a car in Bhubaneswar?</span>
-                <div class="sr-faq-icon"></div>
-            </div>
-            <div class="sr-faq-a">
-                You need a valid driving license and a government-issued ID such as Aadhaar or PAN card for verification.
-            </div>
-        </div>
-
-        <div class="sr-faq-item">
-            <div class="sr-faq-q">
-                <span>Do you provide cars for outstation travel?</span>
-                <div class="sr-faq-icon"></div>
-            </div>
-            <div class="sr-faq-a">
-                Yes, we provide both local and outstation car rental services with flexible packages across Odisha.
-            </div>
-        </div>
-
-        <div class="sr-faq-item">
-            <div class="sr-faq-q">
-                <span>Is fuel included in the rental price?</span>
-                <div class="sr-faq-icon"></div>
-            </div>
-            <div class="sr-faq-a">
-                Fuel is not included. The vehicle will be given with a certain fuel level and should be returned the same.
-            </div>
-        </div>
-
-        <div class="sr-faq-item">
-            <div class="sr-faq-q">
-                <span>Do you offer driver services?</span>
-                <div class="sr-faq-icon"></div>
-            </div>
-            <div class="sr-faq-a">
-                Yes, professional drivers are available on request for a comfortable and stress-free journey.
-            </div>
-        </div>
-
-        <div class="sr-faq-item">
-            <div class="sr-faq-q">
-                <span>What is your cancellation policy?</span>
-                <div class="sr-faq-icon"></div>
-            </div>
-            <div class="sr-faq-a">
-                Free cancellation is available up to 24 hours before the trip. Late cancellations may include charges.
-            </div>
-        </div>
-
-    </div>
-</section>
+    <!-- SWIPER CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <style>
-
-/* ===== FAQ SECTION ===== */
-.sr-faq-sec{
-    background:#f0f2f3;
-    padding:0px 20px 80px;
+/* SWIPER FIX */
+.swiper {
+    padding-bottom: 40px;
 }
 
-.sr-faq-container{
-    max-width:1100px;
-    margin:auto;
-}
-
-/* FAQ ITEM */
-.sr-faq-item{
-    background:#fff;
-    border-radius:12px;
-    margin-bottom:15px;
-    overflow:hidden;
-    border:1px solid #e5e7eb;
-    transition:0.3s ease;
-}
-
-/* ACTIVE STYLE */
-.sr-faq-item.active{
-    border-color:#F4A621;
-    box-shadow:0 8px 25px rgba(0,0,0,0.06);
-}
-
-/* QUESTION */
-.sr-faq-q{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 20px;
-    cursor:pointer;
-    font-weight:600;
-    color:#1a1a1a;
-    font-size:16px;
-}
-
-/* ICON (PLUS → MINUS) */
-.sr-faq-icon{
-    width:18px;
-    height:18px;
-    position:relative;
-}
-
-.sr-faq-icon::before,
-.sr-faq-icon::after{
-    content:'';
-    position:absolute;
-    background:#F4A621;
-    transition:0.3s;
-}
-
-.sr-faq-icon::before{
-    width:18px;
-    height:2px;
-    top:8px;
-    left:0;
-}
-
-.sr-faq-icon::after{
-    width:2px;
-    height:18px;
-    left:8px;
-    top:0;
-}
-
-/* ACTIVE ICON (MINUS) */
-.sr-faq-item.active .sr-faq-icon::after{
-    opacity:0;
-}
-
-/* ANSWER */
-.sr-faq-a{
-    max-height:0;
-    overflow:hidden;
-    padding:0 20px;
-    font-size:14px;
-    color:#555;
-    line-height:1.6;
-    transition:0.4s ease;
-}
-
-/* ACTIVE ANSWER */
-.sr-faq-item.active .sr-faq-a{
-    max-height:200px;
-    padding:0 20px 20px;
-}
-
-/* HOVER EFFECT */
-.sr-faq-item:hover{
-    transform:translateY(-2px);
+/* KEEP YOUR DESIGN SAME */
+.destination-item img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
-    .sr-faq-q{
-        font-size:15px;
+    .destination-item img{
+        height:200px;
+    }
+}
+</style><!-- Destination Start -->
+<div class="container-fluid py-2">
+    <div class="container pt-5 pb-3">
+
+        <div class="text-center mb-3 pb-3">
+            <h6 class=" text-uppercase" style="letter-spacing: 5px; color: #F4A621;">Destination</h6>
+            <h1>Explore Top Destination in India</h1>
+        </div>
+
+        <!-- SWIPER -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <!-- SLIDE -->
+                <div class="swiper-slide">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/travel-agnecy-in-bhubaneswar.webp" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Jaganath Temple</h5>
+                            <span>Puri</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/gallery/nature.webp" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Deomali</h5>
+                            <span>Koraput</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/about-2.webp" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Hirakud</h5>
+                            <span>Sambalpur</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/gallery/daringbadi/hill.webp" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Daringbadi</h5>
+                            <span>Kandhamal</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/gallery/Satkosia/SatkosiaGorge.webp" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Satkosia</h5>
+                            <span>Anugul</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/gallery/koraput/RaniDudumaWaterfall.webp" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="">
+                            <h5 class="text-white">Duduma Waterfall</h5>
+                            <span>Koraput</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Destination End --><!-- SWIPER JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
+    breakpoints: {
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 }
+    }
+});
+</script>
+
+
+    <!-- Service Start -->
+    <div class="container-fluid py-3">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class=" text-uppercase" style="letter-spacing: 5px; color: #F4A621;">Services</h6>
+                <h1>Tours & Travel Services</h1>
+            </div>
+           <div class="row">
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+            <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+            <h5 class="mb-2">Travel Guide</h5>
+            <p class="m-0">
+                Explore Odisha with expert guides covering top destinations culture and seamless travel support
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+            <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
+            <h5 class="mb-2">Ticket Booking</h5>
+            <p class="m-0">
+                Easy ticket booking for flights trains and buses with quick service secure payment and support
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+            <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
+            <h5 class="mb-2">Hotel Booking</h5>
+            <p class="m-0">
+                Book comfortable hotels across Odisha with best deals verified stays and hassle free experience
+            </p>
+        </div>
+    </div>
+
+</div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+
+<style>
+
+/* ===== HEADING ===== */
+.dest-sec{
+    background:#f4f4f4;
+    padding:40px 20px 30px;
+    text-align:center;
+}
+
+.dest-sub{
+    color:#F4A621;
+    letter-spacing:6px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.dest-title{
+    font-size:38px;
+    font-weight:700;
+    color:#1a1a1a;
+}
+
+/* ===== SLIDER ===== */
+.banner-sec{
+    background:#f4f4f4;
+    padding-bottom:60px;
+}
+
+.banner-slider{
+    max-width:1200px;
+    margin:auto;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+/* SLIDE */
+.banner-slide{
+    position:relative;
+    height:420px;
+}
+
+/* IMAGE */
+.banner-slide img{
+    width:100%;
+    height:100%;
+    
+}
+
+/* OVERLAY */
+.banner-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0.2));
+    display:flex;
+    align-items:center;
+    padding:50px;
+}
+
+/* TEXT */
+.banner-text{
+    color:#fff;
+    max-width:500px;
+}
+
+.banner-text h2{
+    font-size:34px;
+    font-weight:600;
+    margin-bottom:20px;
+    line-height:1.3;
+}
+
+.banner-text p{
+    letter-spacing:3px;
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* DOTS */
+.swiper-pagination-bullet{
+    background:#ccc;
+    opacity:1;
+}
+
+.swiper-pagination-bullet-active{
+    background:#F4A621;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .banner-slide{
+        height:280px;
+    }
+    .banner-text h2{
+        font-size:20px;
+    }
+    .banner-overlay{
+        padding:20px;
     }
 }
 
 </style>
 
+
+<!-- HEADING -->
+<section class="dest-sec">
+    <div class="dest-sub">TOP TRAVEL PACKAGES</div>
+    <h2 class="dest-title">Most Popular Package</h2>
+</section>
+
+
+<!-- SLIDER -->
+<section class="banner-sec">
+
+    <div class="swiper banner-slider">
+        <div class="swiper-wrapper">
+
+            <!-- SLIDE 1 -->
+            <div class="swiper-slide banner-slide">
+                <img src="img/kashmir.webp" alt="">
+               
+            </div>
+             <!-- SLIDE 3 -->
+            <div class="swiper-slide banner-slide">
+                <img src="img/family.webp" alt="">
+                
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="swiper-slide banner-slide">
+                <img src="img/ladakh.webp" alt="">
+                
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide banner-slide">
+                <img src="img/sp.webp" alt="">
+                
+            </div>
+           
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide banner-slide">
+                <img src="img/delhi.webp" alt="">
+                
+            </div>
+
+        </div>
+
+        <!-- DOTS -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+</section>
+
+
+
+
 <script>
-
-/* FAQ TOGGLE */
-const srFaq = document.querySelectorAll(".sr-faq-item");
-
-srFaq.forEach(item => {
-    item.addEventListener("click", () => {
-
-        srFaq.forEach(el => el.classList.remove("active"));
-
-        item.classList.toggle("active");
-
-    });
+new Swiper(".banner-slider", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    }
 });
-
 </script>
+    
+
+<style>
+
+/* ===== HEADING ===== */
+.dest-sec{
+    background:#f4f4f4;
+    padding:70px 20px 30px;
+    text-align:center;
+}
+
+.dest-sub{
+    color:#F4A621;
+    letter-spacing:6px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.dest-title{
+    font-size:38px;
+    font-weight:700;
+    color:#1a1a1a;
+}
+
+/* ===== REVIEW SECTION ===== */
+.review-sec{
+    background:#f4f4f4;
+    padding:20px 20px 80px;
+}
+
+/* WRAPPER */
+.review-box{
+    max-width:1100px;
+    margin:auto;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.1);
+    background:#fff;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .dest-title{
+        font-size:26px;
+    }
+}
+
+</style>
+
+
 
 
 <!-- HEADING -->
@@ -1235,46 +1700,46 @@ srFaq.forEach(item => {
             <!-- ORIGINAL CARDS -->
             <div class="zx-card">
                 <div class="zx-top">
-                    <img src="https://i.pravatar.cc/100?img=1" class="zx-img">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjXepwFBCr3xLLKsqM0ZS8r0_REsVpAoCjxir8tyMN6nAE-fSZgL=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
-                        <div class="zx-name">Rahul Sharma</div>
-                        <div class="zx-role">Traveler</div>
+                        <div class="zx-name">Dr. Baikuntha Narayan Dash</div>
+                        
                     </div>
                 </div>
-                <p class="zx-text">Amazing experience! Everything was perfectly managed.</p>
+                <p class="zx-text">Our Daringdadi trip from 1.2.26 to 3.2.26 was excellent. Advenza tour and travel tour operator managed the trip nicely. Two Innova crysta vehicles were hired by us from the tour operator, which were very comfortable. The drivers were very cooperative. Enjoyed the trip</p>
             </div>
 
             <div class="zx-card">
                 <div class="zx-top">
-                    <img src="https://i.pravatar.cc/100?img=2" class="zx-img">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocIeUR96tsDoA7QmY1PMmgIGpNud7-9AoaRwxh7fdlc63y204GE=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
-                        <div class="zx-name">Priya Das</div>
-                        <div class="zx-role">Tourist</div>
+                        <div class="zx-name">Rani Sahoo</div>
+                       
                     </div>
                 </div>
-                <p class="zx-text">Best travel service I’ve ever used.</p>
+                <p class="zx-text">Wanted a quick weekend getaway and my friend suggested this agency. Totally worth it! They planned everything -hotel, sightseeing. The hotel was super comfy and the itinerary was spot on. Would definitely book again! 😊</p>
             </div>
 
             <div class="zx-card">
                 <div class="zx-top">
-                    <img src="https://i.pravatar.cc/100?img=3" class="zx-img">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocJPfyqV49O10M_-6jy5A2UvUI7lmEp6vw9ggF3tJIblnUMB4Q0=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
-                        <div class="zx-name">Amit Patel</div>
-                        <div class="zx-role">Customer</div>
+                        <div class="zx-name">Padmalochan</div>
+                       
                     </div>
                 </div>
-                <p class="zx-text">Loved every moment. Great support.</p>
+                <p class="zx-text">They are provided good service , they are having trusted and professional drivers .overally my experience is good for advenza tour and travel</p>
             </div>
 
             <div class="zx-card">
                 <div class="zx-top">
-                    <img src="https://i.pravatar.cc/100?img=4" class="zx-img">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjUyvclr9DlQ0OrAlAxaOR3ikNUHPyYaJ4EBUxlINFCqWDRSFXRQ=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
-                        <div class="zx-name">Neha Singh</div>
-                        <div class="zx-role">Explorer</div>
+                        <div class="zx-name">Tapas Das</div>
+                        
                     </div>
                 </div>
-                <p class="zx-text">Super premium experience.</p>
+                <p class="zx-text">Advenza tour's is a good travel agency but good behaviour and priority.....</p>
             </div>
 
         </div>
@@ -1445,183 +1910,76 @@ window.addEventListener("resize", () => {
 
 
 
-    <!-- SWIPER CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    <style>
-
-/* ===== HEADING ===== */
-.dest-sec{
-    background:#f4f4f4;
-    padding:40px 20px 30px;
-    text-align:center;
-}
-
-.dest-sub{
-    color:#F4A621;
-    letter-spacing:6px;
-    font-size:13px;
-    font-weight:600;
-}
-
-.dest-title{
-    font-size:38px;
-    font-weight:700;
-    color:#1a1a1a;
-}
-
-/* ===== SLIDER ===== */
-.banner-sec{
-    background:#f4f4f4;
-    padding-bottom:60px;
-}
-
-.banner-slider{
-    max-width:1200px;
-    margin:auto;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-/* SLIDE */
-.banner-slide{
-    position:relative;
-    height:420px;
-}
-
-/* IMAGE */
-.banner-slide img{
-    width:100%;
-    height:100%;
-    
-}
-
-/* OVERLAY */
-.banner-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0.2));
-    display:flex;
-    align-items:center;
-    padding:50px;
-}
-
-/* TEXT */
-.banner-text{
-    color:#fff;
-    max-width:500px;
-}
-
-.banner-text h2{
-    font-size:34px;
-    font-weight:600;
-    margin-bottom:20px;
-    line-height:1.3;
-}
-
-.banner-text p{
-    letter-spacing:3px;
-    font-size:14px;
-    opacity:0.9;
-}
-
-/* DOTS */
-.swiper-pagination-bullet{
-    background:#ccc;
-    opacity:1;
-}
-
-.swiper-pagination-bullet-active{
-    background:#F4A621;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    .banner-slide{
-        height:280px;
-    }
-    .banner-text h2{
-        font-size:20px;
-    }
-    .banner-overlay{
-        padding:20px;
-    }
-}
-
-</style>
-
-
-<!-- HEADING -->
-<section class="dest-sec">
-    <div class="dest-sub">TOP TRAVEL PACKAGES</div>
-    <h2 class="dest-title">Most Popular Package</h2>
-</section>
-
-
-<!-- SLIDER -->
-<section class="banner-sec">
-
-    <div class="swiper banner-slider">
-        <div class="swiper-wrapper">
-
-            <!-- SLIDE 1 -->
-            <div class="swiper-slide banner-slide">
-                <img src="img/kashmir.webp" alt="">
-               
+    <!-- Blog Start -->
+    <div class="container-fluid py-1">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Blog</h6>
+                <h1>Latest From Our Blog</h1>
             </div>
-             <!-- SLIDE 3 -->
-            <div class="swiper-slide banner-slide">
-                <img src="img/family.webp" alt="">
-                
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 mb-4 pb-2">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/blog-1.webp" alt="">
+                            <div class="blog-date">
+                                <h6 class="font-weight-bold mb-n1">01</h6>
+                                <small class="text-white text-uppercase">Jan</small>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4">
+                            <div class="d-flex mb-2">
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
+                                <span class="text-primary px-2">|</span>
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
+                            </div>
+                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 pb-2">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/blog-2.webp" alt="">
+                            <div class="blog-date">
+                                <h6 class="font-weight-bold mb-n1">01</h6>
+                                <small class="text-white text-uppercase">Jan</small>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4">
+                            <div class="d-flex mb-2">
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
+                                <span class="text-primary px-2">|</span>
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
+                            </div>
+                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 pb-2">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="img/blog-3.webp" alt="">
+                            <div class="blog-date">
+                                <h6 class="font-weight-bold mb-n1">01</h6>
+                                <small class="text-white text-uppercase">Jan</small>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4">
+                            <div class="d-flex mb-2">
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
+                                <span class="text-primary px-2">|</span>
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
+                            </div>
+                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- SLIDE 2 -->
-            <div class="swiper-slide banner-slide">
-                <img src="img/ladakh.webp" alt="">
-                
-            </div>
-
-            <!-- SLIDE 3 -->
-            <div class="swiper-slide banner-slide">
-                <img src="img/sp.webp" alt="">
-                
-            </div>
-           
-            <!-- SLIDE 3 -->
-            <div class="swiper-slide banner-slide">
-                <img src="img/delhi.webp" alt="">
-                
-            </div>
-
         </div>
-
-        <!-- DOTS -->
-        <div class="swiper-pagination"></div>
     </div>
-
-</section>
-
-
-<!-- Destination End --><!-- SWIPER JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-new Swiper(".banner-slider", {
-    loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    }
-});
-</script>
-
-
-
-   
+    <!-- Blog End -->
 
 
    <!-- Footer Start -->
@@ -1641,43 +1999,41 @@ new Swiper(".banner-slider", {
        style="border:1px solid #F4A621; color:#F4A621;">
        <i class="fab fa-facebook-f"></i>
     </a>
-   
     <a class="btn btn-square mr-2" href="https://www.youtube.com/@AdvenzaToursandTravel" 
    style="border:1px solid #F4A621; color:#F4A621;">
    <i class="fab fa-youtube"></i>
 </a>
 
-   
-    <a class="btn btn-square mr-2" href="https://www.instagram.com/advenza_tours?igsh=MWVsM2g1NnEzeTYyeg=="
+    
+
+    <a class="btn btn-square" href="https://www.instagram.com/advenza_tours?igsh=MWVsM2g1NnEzeTYyeg=="
+      <a class="btn btn-square" href="https://www.instagram.com/advenza_tours?igsh=MWVsM2g1NnEzeTYyeg=="
        style="border:1px solid #F4A621; color:#F4A621;">
        <i class="fab fa-instagram"></i>
     </a>
-
-    
-  
 
 </div>
             </div>
             <div class="col-lg-2 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
                     
-                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.php"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="package.php"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
-                    <a class="text-white-50" href="blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white-50" href="blog.php"><i class="fa fa-angle-right mr-2"></i>Blog</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Package</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
-                    <a class="text-white-50 mb-2" href="koraput-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
-                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
-                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.html"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
+                    <a class="text-white-50 mb-2" href="puri-konark-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Puri-Konark Tour Package</a>
+                    <a class="text-white-50 mb-2" href="koraput-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Koraput Tour Package</a>
+                    <a class="text-white-50 mb-2" href="sambalpur-bolangir-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Sambalpur-Bolangir Tour Package</a>
+                    <a class="text-white-50 mb-2" href="daringibadi-tour-package.php"><i class="fa fa-angle-right mr-2"></i>Daringbadi Tour Package</a>
                     
                 </div>
             </div>
@@ -1738,7 +2094,7 @@ new Swiper(".banner-slider", {
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="index.html" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
+                <p class="m-0 text-white-50">Copyright &copy; <a href="index.php" style="color: #F4A621;">Advenza Tours & Travel </a>. All Rights Reserved.</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
@@ -1749,6 +2105,7 @@ new Swiper(".banner-slider", {
         </div>
     </div>
     <!-- Footer End -->
+
 
 
     <!-- Back to Top -->
