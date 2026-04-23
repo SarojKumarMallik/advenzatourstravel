@@ -5,7 +5,7 @@
 RewriteEngine On
 
 # Ensure the base directory is correctly set
-RewriteBase /Traveler/
+RewriteBase /
 
 
 # Blog post rewrite rule: /blog/slug -> post.php?slug=slug

@@ -75,7 +75,7 @@ $meta_keywords = !empty($post['meta_keywords']) ? $post['meta_keywords'] : '';
 
 <head>
   
-    <base href="/Traveler/">
+    <base href="/">
     <?php
     // Set variables for seo_tags.php to consume if it's set up that way
     // (In this case, seo_tags.php is included but post.php handles its own meta usually)
