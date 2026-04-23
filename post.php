@@ -773,7 +773,7 @@ function toggleMenu(){
                     $featured_img = $featured_img;
                 } else {
                     // Local image (FIX PATH)
-                    $featured_img = '/Traveler/' . ltrim($featured_img, '/');
+                    $featured_img = '/' . ltrim($featured_img, '/');
                 }
             }
             ?>
@@ -883,7 +883,7 @@ function toggleMenu(){
                                         if (strpos($rp_img, 'http') === 0) {
                                             $rp_img = $rp_img;
                                         } else {
-                                            $rp_img = '/Traveler/' . ltrim($rp_img, '/');
+                                            $rp_img = '/' . ltrim($rp_img, '/');
                                         }
                                     }
                                     ?>
