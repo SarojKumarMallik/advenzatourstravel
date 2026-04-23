@@ -6,8 +6,8 @@ session_start();
 
 $Host = 'localhost';
 $DBUser = 'root';
-$DBPass = 'root';
-$DB = 'shreemanyata_db';
+$DBPass = '';
+$DB = 'advenzatourstravel';
 $Charset = 'utf8mb4';
 
 $dsn = "mysql:host=$Host;dbname=$DB;charset=$Charset";
