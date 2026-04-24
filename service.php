@@ -561,7 +561,7 @@ function toggleContact() {
           <li>✔ Coverage across Cuttack, Puri & Khordha</li>
         </ul>
 
-        <a href="#" class="ax-btn">Book Your Ride</a>
+        <a href="tel:+918328806162" class="ax-btn">Book Your Ride</a>
       </div>
 
       <!-- RIGHT -->

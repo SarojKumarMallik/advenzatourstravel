@@ -4,18 +4,18 @@ session_start();
 // Database Variables
 
 
-// $Host = 'localhost';
-// $DBUser = 'root';
-// $DBPass = 'root';
-// $DB = 'shreemanyata_db';
-// $Charset = 'utf8mb4';
-
-
 $Host = 'localhost';
-$DBUser = 'scott';
-$DBPass = 'tiger';
-$DB = 'advenzatourstravel';
+$DBUser = 'root';
+$DBPass = 'root';
+$DB = 'shreemanyata_db';
 $Charset = 'utf8mb4';
+
+
+// $Host = 'localhost';
+// $DBUser = 'scott';
+// $DBPass = 'tiger';
+// $DB = 'advenzatourstravel';
+// $Charset = 'utf8mb4';
 
 $dsn = "mysql:host=$Host;dbname=$DB;charset=$Charset";
 $options = [

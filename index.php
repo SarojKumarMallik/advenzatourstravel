@@ -551,12 +551,12 @@ function toggleContact() {
 
 <div class="book-now" style="display: flex; justify-content: center; gap: 40px;">
     
-    <a href="" class="btn py-md-3 px-md-5 mt-2" 
+    <a href="contact.php" class="btn py-md-3 px-md-5 mt-2" 
        style="background-color: #F4A621 !important; color: white;">
        Contact Us
     </a>
 
-    <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2 pkg-btn" 
+    <a href="package.php" class="btn btn-primary py-md-3 px-md-5 mt-2 pkg-btn" 
        style="background: transparent; border: 1px solid #F4A621; color:#fff;">
        
        <span>Package</span>
@@ -619,7 +619,7 @@ function toggleContact() {
                         <p>Based in Bhubaneswar, we serve clients from Cuttack, Puri, Khordha, and nearby areas of Odisha, offering personalized travel solutions for both leisure and business needs.</p>
                         <div class="row mb-4">
                             <div class="col-6">
-                                <img class="img-fluid" src="img/koraput.webp" alt="">
+                                <img class="img-fluid" src="img/gallery/koraput1.webp" alt="">
                             </div>
                             <div class="col-6">
                                 <img class="img-fluid" src="img/about-2.webp" alt="">
@@ -1703,6 +1703,14 @@ new Swiper(".banner-slider", {
                     <img src="https://lh3.googleusercontent.com/a-/ALV-UjXepwFBCr3xLLKsqM0ZS8r0_REsVpAoCjxir8tyMN6nAE-fSZgL=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
                         <div class="zx-name">Dr. Baikuntha Narayan Dash</div>
+
+                        <div class="zx-stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-o"></i>
+</div>
                         
                     </div>
                 </div>
@@ -1714,6 +1722,13 @@ new Swiper(".banner-slider", {
                     <img src="https://lh3.googleusercontent.com/a/ACg8ocIeUR96tsDoA7QmY1PMmgIGpNud7-9AoaRwxh7fdlc63y204GE=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
                         <div class="zx-name">Rani Sahoo</div>
+                                                <div class="zx-stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+</div>
                        
                     </div>
                 </div>
@@ -1725,6 +1740,13 @@ new Swiper(".banner-slider", {
                     <img src="https://lh3.googleusercontent.com/a/ACg8ocJPfyqV49O10M_-6jy5A2UvUI7lmEp6vw9ggF3tJIblnUMB4Q0=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
                         <div class="zx-name">Padmalochan</div>
+                                                <div class="zx-stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+</div>
                        
                     </div>
                 </div>
@@ -1736,6 +1758,13 @@ new Swiper(".banner-slider", {
                     <img src="https://lh3.googleusercontent.com/a-/ALV-UjUyvclr9DlQ0OrAlAxaOR3ikNUHPyYaJ4EBUxlINFCqWDRSFXRQ=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
                         <div class="zx-name">Tapas Das</div>
+                                                <div class="zx-stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+</div>
                         
                     </div>
                 </div>
@@ -1753,6 +1782,16 @@ new Swiper(".banner-slider", {
 
 <!-- ================= CSS ================= -->
 <style>
+    /* ===== STARS ===== */
+.zx-stars {
+    margin-top: 4px;
+}
+
+.zx-stars i {
+    color: #F4A621;
+    font-size: 13px;
+    margin-right: 2px;
+}
 
 .zx-testimonial-sec{
     padding:20px 20px;
@@ -1908,78 +1947,167 @@ window.addEventListener("resize", () => {
 
 </script>
 
+<?php
+$stmt = $pdo->prepare("
+    SELECT 
+        posts.*, 
+        categories.name AS category_name
+    FROM posts
+    LEFT JOIN categories ON posts.category_id = categories.id
+    WHERE posts.status = 'published'
+    ORDER BY posts.id DESC
+    LIMIT 3
+");
+
+$stmt->execute();
+$blogs = $stmt->fetchAll();
+
+?>
 
 
 
-    <!-- Blog Start -->
-    <div class="container-fluid py-1">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Blog</h6>
-                <h1>Latest From Our Blog</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-1.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-2.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-3.webp" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
+<style>
+/* ===== BLOG WRAPPER ===== */
+.blog-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== CARD IMPROVEMENTS ===== */
+.blog-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* IMAGE FIX */
+.blog-item img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* CONTENT STRETCH */
+.blog-item .bg-white {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .blog-item img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-item img {
+        height: 180px;
+    }
+}
+</style>
+
+
+<!-- Blog Start -->
+<div class="container-fluid py-1">
+    <div class="container pt-5 pb-3 blog-wrapper">
+
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Blog</h6>
+            <h1>Latest From Our Blog</h1>
         </div>
+
+        <div class="row pb-3">
+
+        <?php if(!empty($blogs)): ?>
+            <?php foreach($blogs as $row): ?>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4 pb-2">
+                <div class="blog-item">
+
+                    <div class="position-relative">
+
+                        <!-- IMAGE -->
+                        <img class="img-fluid w-100"
+                             src="<?php echo $row['featured_image']; ?>"
+                             alt="<?php echo $row['image_alt'] ?: $row['title']; ?>">
+
+                        <!-- DATE -->
+                        <div class="blog-date">
+                            <h6 class="font-weight-bold mb-n1">
+                                <?php echo date("d", strtotime($row['created_at'])); ?>
+                            </h6>
+                            <small class="text-white text-uppercase">
+                                <?php echo date("M", strtotime($row['created_at'])); ?>
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white p-4">
+
+                        <div>
+                            <!-- AUTHOR + CATEGORY -->
+                            <div class="d-flex mb-2">
+                                <a class="text-primary text-uppercase text-decoration-none" href="#">
+                                    Admin
+                                </a>
+
+                                <span class="text-primary px-2">|</span>
+
+                                <a class="text-primary text-uppercase text-decoration-none" href="#">
+                                    <?php echo $row['category_name'] ?? 'Travel'; ?>
+                                </a>
+                            </div>
+
+                            <!-- TITLE -->
+                            <a class="h5 text-decoration-none"
+                               href="blog/<?php echo $row['slug']; ?>">
+                                <?php echo $row['title']; ?>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <?php endforeach; ?>
+        <?php else: ?>
+
+            <div class="col-12 text-center">
+                <p>No blog posts available</p>
+            </div>
+
+        <?php endif; ?>
+
+        </div>
+
+
+<?php if(!empty($blogs)): ?>
+    <!-- View All Button -->
+    <div class="text-center mt-4">
+        <a href="blog.php" class="btn px-4 py-2" 
+           style="background-color:#F4A621; color:#fff; border-radius:30px;">
+            View All Blogs
+        </a>
     </div>
-    <!-- Blog End -->
+<?php endif; ?>
+    </div>
+</div>
+<!-- Blog End -->
 
 
    <!-- Footer Start -->

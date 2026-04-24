@@ -525,13 +525,13 @@ function toggleContact() {
                         <p>Based in Bhubaneswar, we serve clients from Cuttack, Puri, Khordha, and nearby areas of Odisha, offering personalized travel solutions for both leisure and business needs.</p>
                         <div class="row mb-4">
                             <div class="col-6">
-                                <img class="img-fluid" src="img/koraput.webp" alt="">
+                                <img class="img-fluid" src="img/gallery/koraput1.webp" alt="">
                             </div>
                             <div class="col-6">
                                 <img class="img-fluid" src="img/about-2.webp" alt="">
                             </div>
                         </div>
-                        <a href="" class="btn mt-1" style="background-color: #F4A621; color: #fff;">Book Now</a>
+                        <a href="tel:+918328806162" class="btn mt-1" style="background-color: #F4A621; color: #fff;">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -1233,46 +1233,75 @@ srFaq.forEach(item => {
             <!-- ORIGINAL CARDS -->
             <div class="zx-card">
                 <div class="zx-top">
-                    <img src="https://i.pravatar.cc/100?img=1" class="zx-img">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjXepwFBCr3xLLKsqM0ZS8r0_REsVpAoCjxir8tyMN6nAE-fSZgL=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
-                        <div class="zx-name">Rahul Sharma</div>
-                        <div class="zx-role">Traveler</div>
+                        <div class="zx-name">Dr. Baikuntha Narayan Dash</div>
+
+                        <div class="zx-stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-o"></i>
+</div>
+                        
                     </div>
                 </div>
-                <p class="zx-text">Amazing experience! Everything was perfectly managed.</p>
+                <p class="zx-text">Our Daringdadi trip from 1.2.26 to 3.2.26 was excellent. Advenza tour and travel tour operator managed the trip nicely. Two Innova crysta vehicles were hired by us from the tour operator, which were very comfortable. The drivers were very cooperative. Enjoyed the trip</p>
             </div>
 
             <div class="zx-card">
                 <div class="zx-top">
-                    <img src="https://i.pravatar.cc/100?img=2" class="zx-img">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocIeUR96tsDoA7QmY1PMmgIGpNud7-9AoaRwxh7fdlc63y204GE=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
-                        <div class="zx-name">Priya Das</div>
-                        <div class="zx-role">Tourist</div>
+                        <div class="zx-name">Rani Sahoo</div>
+                                                <div class="zx-stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+</div>
+                       
                     </div>
                 </div>
-                <p class="zx-text">Best travel service I’ve ever used.</p>
+                <p class="zx-text">Wanted a quick weekend getaway and my friend suggested this agency. Totally worth it! They planned everything -hotel, sightseeing. The hotel was super comfy and the itinerary was spot on. Would definitely book again! 😊</p>
             </div>
 
             <div class="zx-card">
                 <div class="zx-top">
-                    <img src="https://i.pravatar.cc/100?img=3" class="zx-img">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocJPfyqV49O10M_-6jy5A2UvUI7lmEp6vw9ggF3tJIblnUMB4Q0=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
-                        <div class="zx-name">Amit Patel</div>
-                        <div class="zx-role">Customer</div>
+                        <div class="zx-name">Padmalochan</div>
+                                                <div class="zx-stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+</div>
+                       
                     </div>
                 </div>
-                <p class="zx-text">Loved every moment. Great support.</p>
+                <p class="zx-text">They are provided good service , they are having trusted and professional drivers .overally my experience is good for advenza tour and travel</p>
             </div>
 
             <div class="zx-card">
                 <div class="zx-top">
-                    <img src="https://i.pravatar.cc/100?img=4" class="zx-img">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjUyvclr9DlQ0OrAlAxaOR3ikNUHPyYaJ4EBUxlINFCqWDRSFXRQ=w72-h72-p-rp-mo-br100" class="zx-img">
                     <div>
-                        <div class="zx-name">Neha Singh</div>
-                        <div class="zx-role">Explorer</div>
+                        <div class="zx-name">Tapas Das</div>
+                                                <div class="zx-stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+</div>
+                        
                     </div>
                 </div>
-                <p class="zx-text">Super premium experience.</p>
+                <p class="zx-text">Advenza tour's is a good travel agency but good behaviour and priority.....</p>
             </div>
 
         </div>
@@ -1286,6 +1315,16 @@ srFaq.forEach(item => {
 
 <!-- ================= CSS ================= -->
 <style>
+    /* ===== STARS ===== */
+.zx-stars {
+    margin-top: 4px;
+}
+
+.zx-stars i {
+    color: #F4A621;
+    font-size: 13px;
+    margin-right: 2px;
+}
 
 .zx-testimonial-sec{
     padding:20px 20px;
@@ -1440,7 +1479,6 @@ window.addEventListener("resize", () => {
 });
 
 </script>
-
 
 
     <!-- SWIPER CSS -->
